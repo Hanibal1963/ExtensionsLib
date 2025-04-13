@@ -1460,49 +1460,112 @@ Public Module DataExtensions
   ''' <returns>
   ''' Der Hexadezimalwert.
   ''' </returns>
+  ''' <remarks>
+  ''' Diese Methode formatiert den übergebenen Byte-Wert als hexadezimale Zeichenfolge,
+  ''' die mit "0x" beginnt, was der Konvention in C# entspricht.
+  ''' </remarks>
   <DebuggerStepThrough> <Extension>
   Public Function ToCSharpHex(sender As Byte) As String
+    ' Konvertiert den Byte-Wert in eine hexadezimale Zeichenfolge.
+    ' Die Methode Convert.ToString(sender, 16) wandelt den Wert in eine Basis-16-Zeichenfolge um.
+    ' Die Methode ToUpper() stellt sicher, dass die Buchstaben in Großbuchstaben dargestellt werden.
+    ' String.Format fügt das Präfix "0x" hinzu, um die C#-Hexadezimaldarstellung zu erzeugen.
     Return String.Format("0x{0}", Convert.ToString(sender, 16).ToUpper())
   End Function
 
-  ''' <inheritdoc cref="ToCSharpHex(Byte)"/>
+  ''' <summary>
+  ''' Konvertiert einen Short-Wert in seine literale hexadezimale C#-Darstellung.
+  ''' </summary>
+  ''' <param name="sender">
+  ''' Der Short-Wert, der konvertiert werden soll.
+  ''' </param>
+  ''' <returns>
+  ''' Eine Zeichenfolge, die den hexadezimalen Wert mit dem Präfix "0x" darstellt.
+  ''' </returns>
+  ''' <remarks>
+  ''' Diese Methode formatiert den übergebenen Short-Wert als hexadezimale Zeichenfolge,
+  ''' die mit "0x" beginnt, was der Konvention in C# entspricht.
+  ''' </remarks>
   <DebuggerStepThrough> <Extension>
   Public Function ToCSharpHex(sender As Short) As String
-
+    ' Konvertiert den Short-Wert in eine hexadezimale Zeichenfolge und gibt sie mit dem Präfix "0x" zurück.
     Return String.Format("0x{0}", Convert.ToString(sender, toBase:=16).ToUpper)
-
   End Function
 
-  ''' <inheritdoc cref="ToCSharpHex(Byte)"/>
+  ''' <summary>
+  ''' Konvertiert einen UShort-Wert in seine literale hexadezimale C#-Darstellung.
+  ''' </summary>
+  ''' <param name="sender">
+  ''' Der UShort-Wert, der konvertiert werden soll.
+  ''' </param>
+  ''' <returns>
+  ''' Eine Zeichenfolge, die den hexadezimalen Wert mit dem Präfix "0x" darstellt.
+  ''' </returns>
+  ''' <remarks>
+  ''' Diese Methode formatiert den übergebenen UShort-Wert als hexadezimale Zeichenfolge,
+  ''' die mit "0x" beginnt, was der Konvention in C# entspricht.
+  ''' </remarks>
   <DebuggerStepThrough> <Extension>
   Public Function ToCSharpHex(sender As UShort) As String
-
+    ' Konvertiert den UShort-Wert in eine hexadezimale Zeichenfolge und gibt sie mit dem Präfix "0x" zurück.
     Return String.Format("0x{0}", Convert.ToString(sender, toBase:=16).ToUpper)
-
   End Function
 
-  ''' <inheritdoc cref="ToCSharpHex(Byte)"/>
+  ''' <summary>
+  ''' Konvertiert einen Integer-Wert in seine literale hexadezimale C#-Darstellung.
+  ''' </summary>
+  ''' <param name="sender">
+  ''' Der Integer-Wert, der konvertiert werden soll.
+  ''' </param>
+  ''' <returns>
+  ''' Eine Zeichenfolge, die den hexadezimalen Wert mit dem Präfix "0x" darstellt.
+  ''' </returns>
+  ''' <remarks>
+  ''' Diese Methode formatiert den übergebenen Integer-Wert als hexadezimale Zeichenfolge,
+  ''' die mit "0x" beginnt, was der Konvention in C# entspricht.
+  ''' </remarks>
   <DebuggerStepThrough> <Extension>
   Public Function ToCSharpHex(sender As Integer) As String
-
+    ' Konvertiert den Integer-Wert in eine hexadezimale Zeichenfolge und gibt sie mit dem Präfix "0x" zurück.
     Return String.Format("0x{0}", Convert.ToString(sender, toBase:=16).ToUpper)
-
   End Function
 
-  ''' <inheritdoc cref="ToCSharpHex(Byte)"/>
+  ''' <summary>
+  ''' Konvertiert einen UInteger-Wert in seine literale hexadezimale C#-Darstellung.
+  ''' </summary>
+  ''' <param name="sender">
+  ''' Der UInteger-Wert, der konvertiert werden soll.
+  ''' </param>
+  ''' <returns>
+  ''' Eine Zeichenfolge, die den hexadezimalen Wert mit dem Präfix "0x" und dem Suffix "U" darstellt.
+  ''' </returns>
+  ''' <remarks>
+  ''' Diese Methode formatiert den übergebenen UInteger-Wert als hexadezimale Zeichenfolge,
+  ''' die mit "0x" beginnt und mit "U" endet, was der Konvention in C# entspricht.
+  ''' </remarks>
   <DebuggerStepThrough> <Extension>
   Public Function ToCSharpHex(sender As UInteger) As String
-
+    ' Konvertiert den UInteger-Wert in eine hexadezimale Zeichenfolge und gibt sie mit dem Präfix "0x" und dem Suffix "U" zurück.
     Return String.Format("0x{0}U", Convert.ToString(sender, toBase:=16).ToUpper)
-
   End Function
 
-  ''' <inheritdoc cref="ToCSharpHex(Byte)"/>
+  ''' <summary>
+  ''' Konvertiert einen Long-Wert in seine literale hexadezimale C#-Darstellung.
+  ''' </summary>
+  ''' <param name="sender">
+  ''' Der Long-Wert, der konvertiert werden soll.
+  ''' </param>
+  ''' <returns>
+  ''' Eine Zeichenfolge, die den hexadezimalen Wert mit dem Präfix "0x" und dem Suffix "L" darstellt.
+  ''' </returns>
+  ''' <remarks>
+  ''' Diese Methode formatiert den übergebenen Long-Wert als hexadezimale Zeichenfolge,
+  ''' die mit "0x" beginnt und mit "L" endet, was der Konvention in C# entspricht.
+  ''' </remarks>
   <DebuggerStepThrough> <Extension>
   Public Function ToCSharpHex(sender As Long) As String
-
+    ' Konvertiert den Long-Wert in eine hexadezimale Zeichenfolge und gibt sie mit dem Präfix "0x" und dem Suffix "L" zurück.
     Return String.Format("0x{0}L", Convert.ToString(sender, toBase:=16).ToUpper)
-
   End Function
 
 #End Region
