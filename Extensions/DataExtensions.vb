@@ -1357,54 +1357,97 @@ Public Module DataExtensions
 #Region "Einen Wert in seine literale hexadezimale Visual Basic-Darstellung konvertieren"
 
   ''' <summary>
-  ''' Konvertiert einen Wert in seine literale hexadezimale Visual Basic-Darstellung.
+  ''' Konvertiert einen Byte-Wert in seine literale hexadezimale Visual Basic-Darstellung.
   ''' </summary>
+  ''' <param name="sender">
+  ''' Der Byte-Wert, der konvertiert werden soll.
+  ''' </param>
   ''' <returns>
   ''' Der Hexadezimalwert.
   ''' </returns>
+  ''' <remarks>
+  ''' Eine Zeichenfolge, die den hexadezimalen Wert darstellt.
+  ''' </remarks>
   <DebuggerStepThrough> <Extension>
   Public Function ToVBHex(sender As Byte) As String
+    ' Konvertiert den Byte-Wert in eine hexadezimale Zeichenfolge und formatiert sie
+    ' mit "&H" als Präfix. Die Ausgabe wird in Großbuchstaben dargestellt.
     Return String.Format("&H{0}", Convert.ToString(sender, 16).ToUpper())
   End Function
 
-  ''' <inheritdoc cref="ToVBHex(Byte)"/>
+  ''' <summary>
+  ''' Konvertiert einen Short-Wert in seine literale hexadezimale Visual Basic-Darstellung.
+  ''' </summary>
+  ''' <param name="sender">
+  ''' Der Short-Wert, der konvertiert werden soll.
+  ''' </param>
+  ''' <returns>
+  ''' Eine Zeichenfolge, die den hexadezimalen Wert mit dem Suffix "S" darstellt.
+  ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function ToVBHex(sender As Short) As String
-
+    ' Konvertiert den Short-Wert in eine hexadezimale Zeichenfolge und fügt das Suffix "S" hinzu.
     Return String.Format("&H{0}S", Convert.ToString(sender, toBase:=16).ToUpper)
-
   End Function
 
-  ''' <inheritdoc cref="ToVBHex(Byte)"/>
+  ''' <summary>
+  ''' Konvertiert einen UShort-Wert in seine literale hexadezimale Visual Basic-Darstellung.
+  ''' </summary>
+  ''' <param name="sender">
+  ''' Der UShort-Wert, der konvertiert werden soll.
+  ''' </param>
+  ''' <returns>
+  ''' Eine Zeichenfolge, die den hexadezimalen Wert mit dem Suffix "US" darstellt.
+  ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function ToVBHex(sender As UShort) As String
-
+    ' Konvertiert den UShort-Wert in eine hexadezimale Zeichenfolge und fügt das Suffix "US" hinzu.
     Return String.Format("&H{0}US", Convert.ToString(sender, toBase:=16).ToUpper)
-
   End Function
 
-  ''' <inheritdoc cref="ToVBHex(Byte)"/>
+  ''' <summary>
+  ''' Konvertiert einen Integer-Wert in seine literale hexadezimale Visual Basic-Darstellung.
+  ''' </summary>
+  ''' <param name="sender">
+  ''' Der Integer-Wert, der konvertiert werden soll.
+  ''' </param>
+  ''' <returns>
+  ''' Eine Zeichenfolge, die den hexadezimalen Wert mit dem Suffix "I" darstellt.
+  ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function ToVBHex(sender As Integer) As String
-
+    ' Konvertiert den Integer-Wert in eine hexadezimale Zeichenfolge und fügt das Suffix "I" hinzu.
     Return String.Format("&H{0}I", Convert.ToString(sender, toBase:=16).ToUpper)
-
   End Function
 
-  ''' <inheritdoc cref="ToVBHex(Byte)"/>
+  ''' <summary>
+  ''' Konvertiert einen UInteger-Wert in seine literale hexadezimale Visual Basic-Darstellung.
+  ''' </summary>
+  ''' <param name="sender">
+  ''' Der UInteger-Wert, der konvertiert werden soll.
+  ''' </param>
+  ''' <returns>
+  ''' Eine Zeichenfolge, die den hexadezimalen Wert mit dem Suffix "UI" darstellt.
+  ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function ToVBHex(sender As UInteger) As String
-
+    ' Konvertiert den UInteger-Wert in eine hexadezimale Zeichenfolge und fügt das Suffix "UI" hinzu.
     Return String.Format("&H{0}UI", Convert.ToString(sender, toBase:=16).ToUpper)
-
   End Function
 
-  ''' <inheritdoc cref="ToVBHex(Byte)"/>
+  ''' <summary>
+  ''' Konvertiert einen Long-Wert in seine literale hexadezimale Visual Basic-Darstellung.
+  ''' </summary>
+  ''' <param name="sender">
+  ''' Der Long-Wert, der konvertiert werden soll.
+  ''' </param>
+  ''' <returns>
+  ''' Eine Zeichenfolge, die den hexadezimalen Wert mit dem Suffix "L" darstellt.
+  ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function ToVBHex(sender As Long) As String
-
+    ' Konvertiert den Long-Wert in eine hexadezimale Zeichenfolge und fügt das Suffix "L" hinzu.
     Return String.Format("&H{0}L", Convert.ToString(sender, toBase:=16).ToUpper)
-
   End Function
 
 #End Region
