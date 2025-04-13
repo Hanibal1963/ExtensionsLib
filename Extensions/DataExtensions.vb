@@ -1587,9 +1587,10 @@ Public Module DataExtensions
   ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function Formatted(sender As Short, culture As Globalization.CultureInfo, precision As Integer) As String
-
+    ' Ruft die interne Funktion auf, um den Wert zu formatieren.
+    ' Übergibt den Wert (sender), die gewünschte Präzision (precision) und die Kultur (culture).
+    ' Die interne Funktion kümmert sich um die eigentliche Formatierung des Wertes.
     Return InternalFormatted(sender, precision, culture)
-
   End Function
 
   ''' <summary>
@@ -1597,114 +1598,268 @@ Public Module DataExtensions
   ''' abhängig von der angegebenen Kultur ohne Dezimalstellen.
   ''' </summary>
   ''' <param name="culture">
-  ''' Das Kulturformat.
+  ''' Das Kulturformat, das bestimmt, wie Zahlen formatiert werden (z. B. "de-DE" für Deutsch).
   ''' </param>
   ''' <returns>
-  ''' Der formatierte Wert.
+  ''' Der formatierte Wert als Zeichenfolge.
   ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function Formatted(sender As Short, culture As Globalization.CultureInfo) As String
-
+    ' Ruft die überladene Methode auf, die auch die Präzision (Anzahl der Dezimalstellen) akzeptiert,
+    ' und setzt die Präzision standardmäßig auf 0.
     Return Formatted(sender, culture, 0)
-
   End Function
 
+  ''' <summary>
+  ''' Formatiert einen Wert durch Platzieren von Punkten oder Kommas an den entsprechenden Positionen, 
+  ''' abhängig von der angegebenen Kultur und der angegebenen Präzision.
+  ''' </summary>
+  ''' <param name="culture">
+  ''' Das Kulturformat, das bestimmt, wie Zahlen formatiert werden (z. B. "de-DE" für Deutsch).
+  ''' </param>
+  ''' <param name="precision">
+  ''' Die Anzahl der Dezimalstellen, die im formatierten Wert angezeigt werden sollen.
+  ''' </param>
+  ''' <returns>
+  ''' Der formatierte Wert als Zeichenfolge.
+  ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function Formatted(sender As UShort, culture As Globalization.CultureInfo, precision As Integer) As String
-
+    ' Ruft die interne Funktion auf, die die eigentliche Formatierung basierend auf den übergebenen Parametern durchführt.
     Return InternalFormatted(sender, precision, culture)
-
   End Function
 
+  ''' <summary>
+  ''' Formatiert einen Wert durch Platzieren von Punkten oder Kommas an den entsprechenden Positionen, 
+  ''' abhängig von der angegebenen Kultur ohne Dezimalstellen.
+  ''' </summary>
+  ''' <param name="culture">
+  ''' Das Kulturformat, das bestimmt, wie Zahlen formatiert werden (z. B. "de-DE" für Deutsch).
+  ''' </param>
+  ''' <returns>
+  ''' Der formatierte Wert als Zeichenfolge.
+  ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function Formatted(sender As UShort, culture As Globalization.CultureInfo) As String
-
+    ' Ruft die überladene Methode auf, die auch die Präzision (Anzahl der Dezimalstellen) akzeptiert,
+    ' und setzt die Präzision standardmäßig auf 0.
     Return Formatted(sender, culture, 0)
-
   End Function
 
+  ''' <summary>
+  ''' Formatiert einen Wert durch Platzieren von Punkten oder Kommas an den entsprechenden Positionen, 
+  ''' abhängig von der angegebenen Kultur und der angegebenen Präzision.
+  ''' </summary>
+  ''' <param name="culture">
+  ''' Das Kulturformat, das bestimmt, wie Zahlen formatiert werden (z. B. "de-DE" für Deutsch).
+  ''' </param>
+  ''' <param name="precision">
+  ''' Die Anzahl der Dezimalstellen, die im formatierten Wert angezeigt werden sollen.
+  ''' </param>
+  ''' <returns>
+  ''' Der formatierte Wert als Zeichenfolge.
+  ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function Formatted(sender As Integer, culture As Globalization.CultureInfo, precision As Integer) As String
-
+    ' Ruft die interne Funktion auf, die die eigentliche Formatierung basierend auf den übergebenen Parametern durchführt.
     Return InternalFormatted(sender, precision, culture)
-
   End Function
 
+  ''' <summary>
+  ''' Formatiert einen Wert durch Platzieren von Punkten oder Kommas an den entsprechenden Positionen, 
+  ''' abhängig von der angegebenen Kultur ohne Dezimalstellen.
+  ''' </summary>
+  ''' <param name="culture">
+  ''' Das Kulturformat, das bestimmt, wie Zahlen formatiert werden (z. B. "de-DE" für Deutsch).
+  ''' </param>
+  ''' <returns>
+  ''' Der formatierte Wert als Zeichenfolge.
+  ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function Formatted(sender As Integer, culture As Globalization.CultureInfo) As String
-
+    ' Ruft die überladene Methode auf, die auch die Präzision (Anzahl der Dezimalstellen) akzeptiert,
+    ' und setzt die Präzision standardmäßig auf 0.
     Return Formatted(sender, culture, 0)
-
   End Function
 
+  ''' <summary>
+  ''' Formatiert einen Wert durch Platzieren von Punkten oder Kommas an den entsprechenden Positionen, 
+  ''' abhängig von der angegebenen Kultur und der angegebenen Präzision.
+  ''' </summary>
+  ''' <param name="culture">
+  ''' Das Kulturformat, das bestimmt, wie Zahlen formatiert werden (z. B. "de-DE" für Deutsch).
+  ''' </param>
+  ''' <param name="precision">
+  ''' Die Anzahl der Dezimalstellen, die im formatierten Wert angezeigt werden sollen.
+  ''' </param>
+  ''' <returns>
+  ''' Der formatierte Wert als Zeichenfolge.
+  ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function Formatted(sender As UInteger, culture As Globalization.CultureInfo, precision As Integer) As String
-
+    ' Ruft die interne Funktion auf, die die eigentliche Formatierung basierend auf den übergebenen Parametern durchführt.
     Return InternalFormatted(sender, precision, culture)
-
   End Function
 
+  ''' <summary>
+  ''' Formatiert einen Wert durch Platzieren von Punkten oder Kommas an den entsprechenden Positionen, 
+  ''' abhängig von der angegebenen Kultur ohne Dezimalstellen.
+  ''' </summary>
+  ''' <param name="culture">
+  ''' Das Kulturformat, das bestimmt, wie Zahlen formatiert werden (z. B. "de-DE" für Deutsch).
+  ''' </param>
+  ''' <returns>
+  ''' Der formatierte Wert als Zeichenfolge.
+  ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function Formatted(sender As UInteger, culture As Globalization.CultureInfo) As String
-
+    ' Ruft die überladene Methode auf, die auch die Präzision (Anzahl der Dezimalstellen) akzeptiert,
+    ' und setzt die Präzision standardmäßig auf 0.
     Return Formatted(sender, culture, 0)
-
   End Function
 
+  ''' <summary>
+  ''' Formatiert einen Wert durch Platzieren von Punkten oder Kommas an den entsprechenden Positionen, 
+  ''' abhängig von der angegebenen Kultur und der angegebenen Präzision.
+  ''' </summary>
+  ''' <param name="culture">
+  ''' Das Kulturformat, das bestimmt, wie Zahlen formatiert werden (z. B. "de-DE" für Deutsch).
+  ''' </param>
+  ''' <param name="precision">
+  ''' Die Anzahl der Dezimalstellen, die im formatierten Wert angezeigt werden sollen.
+  ''' </param>
+  ''' <returns>
+  ''' Der formatierte Wert als Zeichenfolge.
+  ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function Formatted(sender As Long, culture As Globalization.CultureInfo, precision As Integer) As String
-
+    ' Ruft die interne Funktion auf, die die eigentliche Formatierung basierend auf den übergebenen Parametern durchführt.
     Return InternalFormatted(sender, precision, culture)
-
   End Function
 
+  ''' <summary>
+  ''' Formatiert einen Wert durch Platzieren von Punkten oder Kommas an den entsprechenden Positionen, 
+  ''' abhängig von der angegebenen Kultur ohne Dezimalstellen.
+  ''' </summary>
+  ''' <param name="culture">
+  ''' Das Kulturformat, das bestimmt, wie Zahlen formatiert werden (z. B. "de-DE" für Deutsch).
+  ''' </param>
+  ''' <returns>
+  ''' Der formatierte Wert als Zeichenfolge.
+  ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function Formatted(sender As Long, culture As Globalization.CultureInfo) As String
-
+    ' Ruft die überladene Methode auf, die auch die Präzision (Anzahl der Dezimalstellen) akzeptiert,
+    ' und setzt die Präzision standardmäßig auf 0.
     Return Formatted(sender, culture, 0)
-
   End Function
 
+  ''' <summary>
+  ''' Formatiert einen Wert durch Platzieren von Punkten oder Kommas an den entsprechenden Positionen, 
+  ''' abhängig von der angegebenen Kultur und der angegebenen Präzision.
+  ''' </summary>
+  ''' <param name="culture">
+  ''' Das Kulturformat, das bestimmt, wie Zahlen formatiert werden (z. B. "de-DE" für Deutsch).
+  ''' </param>
+  ''' <param name="precision">
+  ''' Die Anzahl der Dezimalstellen, die im formatierten Wert angezeigt werden sollen.
+  ''' </param>
+  ''' <returns>
+  ''' Der formatierte Wert als Zeichenfolge.
+  ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function Formatted(sender As Decimal, culture As Globalization.CultureInfo, precision As Integer) As String
-
+    ' Ruft die interne Funktion auf, die die eigentliche Formatierung basierend auf den übergebenen Parametern durchführt.
     Return InternalFormatted(sender, precision, culture)
-
   End Function
 
+  ''' <summary>
+  ''' Formatiert einen Wert durch Platzieren von Punkten oder Kommas an den entsprechenden Positionen, 
+  ''' abhängig von der angegebenen Kultur ohne Dezimalstellen.
+  ''' </summary>
+  ''' <param name="culture">
+  ''' Das Kulturformat, das bestimmt, wie Zahlen formatiert werden (z. B. "de-DE" für Deutsch).
+  ''' </param>
+  ''' <returns>
+  ''' Der formatierte Wert als Zeichenfolge.
+  ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function Formatted(sender As Decimal, culture As Globalization.CultureInfo) As String
-
+    ' Ruft die überladene Methode auf, die auch die Präzision (Anzahl der Dezimalstellen) akzeptiert,
+    ' und setzt die Präzision standardmäßig auf 0.
     Return Formatted(sender, culture, 0)
-
   End Function
 
+  ''' <summary>
+  ''' Formatiert einen Wert durch Platzieren von Punkten oder Kommas an den entsprechenden Positionen, 
+  ''' abhängig von der angegebenen Kultur und der angegebenen Präzision.
+  ''' </summary>
+  ''' <param name="culture">
+  ''' Das Kulturformat, das bestimmt, wie Zahlen formatiert werden (z. B. "de-DE" für Deutsch).
+  ''' </param>
+  ''' <param name="precision">
+  ''' Die Anzahl der Dezimalstellen, die im formatierten Wert angezeigt werden sollen.
+  ''' </param>
+  ''' <returns>
+  ''' Der formatierte Wert als Zeichenfolge.
+  ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function Formatted(sender As Double, culture As Globalization.CultureInfo, precision As Integer) As String
-
+    ' Ruft die interne Funktion auf, die die eigentliche Formatierung basierend auf den übergebenen Parametern durchführt.
     Return InternalFormatted(sender, precision, culture)
-
   End Function
 
+  ''' <summary>
+  ''' Formatiert einen Wert durch Platzieren von Punkten oder Kommas an den entsprechenden Positionen, 
+  ''' abhängig von der angegebenen Kultur ohne Dezimalstellen.
+  ''' </summary>
+  ''' <param name="culture">
+  ''' Das Kulturformat, das bestimmt, wie Zahlen formatiert werden (z. B. "de-DE" für Deutsch).
+  ''' </param>
+  ''' <returns>
+  ''' Der formatierte Wert als Zeichenfolge.
+  ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function Formatted(sender As Double, culture As Globalization.CultureInfo) As String
-
+    ' Ruft die überladene Methode auf, die auch die Präzision (Anzahl der Dezimalstellen) akzeptiert,
+    ' und setzt die Präzision standardmäßig auf 0.
     Return Formatted(sender, culture, 0)
-
   End Function
 
+  ''' <summary>
+  ''' Formatiert einen Wert durch Platzieren von Punkten oder Kommas an den entsprechenden Positionen, 
+  ''' abhängig von der angegebenen Kultur und der angegebenen Präzision.
+  ''' </summary>
+  ''' <param name="culture">
+  ''' Das Kulturformat, das bestimmt, wie Zahlen formatiert werden (z. B. "de-DE" für Deutsch).
+  ''' </param>
+  ''' <param name="precision">
+  ''' Die Anzahl der Dezimalstellen, die im formatierten Wert angezeigt werden sollen.
+  ''' </param>
+  ''' <returns>
+  ''' Der formatierte Wert als Zeichenfolge.
+  ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function Formatted(sender As Single, culture As Globalization.CultureInfo, precision As Integer) As String
-
+    ' Ruft die interne Funktion auf, die die eigentliche Formatierung basierend auf den übergebenen Parametern durchführt.
     Return InternalFormatted(sender, precision, culture)
-
   End Function
 
+  ''' <summary>
+  ''' Formatiert einen Wert durch Platzieren von Punkten oder Kommas an den entsprechenden Positionen, 
+  ''' abhängig von der angegebenen Kultur ohne Dezimalstellen.
+  ''' </summary>
+  ''' <param name="culture">
+  ''' Das Kulturformat, das bestimmt, wie Zahlen formatiert werden (z. B. "de-DE" für Deutsch).
+  ''' </param>
+  ''' <returns>
+  ''' Der formatierte Wert als Zeichenfolge.
+  ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function Formatted(sender As Single, culture As Globalization.CultureInfo) As String
-
+    ' Ruft die überladene Methode auf, die auch die Präzision (Anzahl der Dezimalstellen) akzeptiert,
+    ' und setzt die Präzision standardmäßig auf 0.
     Return Formatted(sender, culture, 0)
-
   End Function
 
 #End Region
