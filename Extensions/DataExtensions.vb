@@ -2041,28 +2041,28 @@ Public Module DataExtensions
   ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function BubbleSort(sender As IEnumerable(Of String)) As IEnumerable(Of String)
-
+    ' Wendet eine Transformation auf jedes Element der Sammlung an, um eine sortierbare Struktur zu erstellen.
     Return sender.Select(
       Function(value As String)
-
+        ' Erstellt ein anonymes Objekt mit dem Originalwert und einem sortierbaren Schlüssel.
         Return New With {
-                 Key .OrgStr = value,
-                 Key .SortStr =
+                 Key .OrgStr = value, ' Originalzeichenfolge
+                 Key .SortStr = ' Sortierschlüssel
                  Text.RegularExpressions.Regex.Replace(
-                 value, "(\d+)|(\D+)",
+                 value, "(\d+)|(\D+)", ' Teilt die Zeichenfolge in numerische und nicht-numerische Teile auf.
                  Function(match As Text.RegularExpressions.Match)
-
+                   ' Formatiert jeden Teil so, dass numerische Teile mit Leerzeichen aufgefüllt werden
+                   ' und nicht-numerische Teile mit dem maximalen Zeichenwert.
                    Return match.Value.PadLeft(
                    sender.Select(
                     Function(str As String)
-                      Return str.Length
+                      Return str.Length ' Ermittelt die maximale Länge der Zeichenfolgen in der Sammlung.
                     End Function
                   ).Max, If(Char.IsDigit(match.Value(0)), " "c, Char.MaxValue))
                  End Function)
         }
-
       End Function).OrderBy(Function(anon) anon.SortStr).Select(Function(anon) anon.OrgStr)
-
+    ' Sortiert die anonymen Objekte nach dem Sortierschlüssel und gibt die Originalzeichenfolgen zurück.
   End Function
 
 #End Region
