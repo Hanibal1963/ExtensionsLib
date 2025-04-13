@@ -1921,18 +1921,20 @@ Public Module DataExtensions
   ''' Die Zeichenfolge, nach der gesucht werden soll.
   ''' </param>
   ''' <param name="stringComparison">
-  ''' Die Zeichenfolgenvergleichsregel.
+  ''' Die Zeichenfolgenvergleichsregel, die angibt, wie die Zeichenfolgen verglichen werden sollen (z. B. Groß-/Kleinschreibung beachten oder nicht).
   ''' </param>
   ''' <returns>
   ''' Die gefundenen Elemente als <see cref="IEnumerable(Of String)"/>.
   ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function FindExact(sender As IEnumerable(Of String), searchString As String, stringComparison As StringComparison) As IEnumerable(Of String)
-
+    ' Deklariert eine Variable, die die Ergebnisse der Suche speichert.
     Dim result As IEnumerable(Of String)
+    ' Verwendet eine LINQ-Abfrage, um alle Elemente in der Sammlung zu finden, 
+    ' die genau mit der angegebenen Zeichenfolge übereinstimmen, basierend auf der Vergleichsregel.
     result = From str As String In sender Where str.Equals(searchString, stringComparison)
+    ' Gibt die gefundenen Elemente zurück.
     Return result
-
   End Function
 
   ''' <summary>
@@ -1949,11 +1951,14 @@ Public Module DataExtensions
   ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function FindByContains(sender As IEnumerable(Of String), searchString As String, ignoreCase As Boolean) As IEnumerable(Of String)
-
+    ' Deklariert eine Variable, die die Ergebnisse der Suche speichert.
     Dim result As IEnumerable(Of String)
+    ' Führt eine LINQ-Abfrage aus, um alle Elemente in der Sammlung zu finden, 
+    ' die die angegebene Zeichenfolge enthalten. Der Vergleich kann optional 
+    ' groß-/kleinschreibungsunabhängig sein, basierend auf dem Parameter "ignoreCase".
     result = From str As String In sender Where If(ignoreCase, str.ToLower.Contains(searchString.ToLower), str.Contains(searchString))
+    ' Gibt die gefundenen Elemente zurück.
     Return result
-
   End Function
 
   ''' <summary>
@@ -1967,11 +1972,14 @@ Public Module DataExtensions
   ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function FindByContains(sender As IEnumerable(Of String), searchString As String) As IEnumerable(Of String)
-
+    ' Deklariert eine Variable, die die Ergebnisse der Suche speichert.
     Dim result As IEnumerable(Of String)
+    ' Führt eine LINQ-Abfrage aus, um alle Elemente in der Sammlung zu finden,
+    ' die die angegebene Zeichenfolge enthalten. Der Vergleich ist standardmäßig
+    ' groß-/kleinschreibungsabhängig, da der zweite Parameter von If auf False gesetzt ist.
     result = From str As String In sender Where If(False, str.ToLower.Contains(searchString.ToLower), str.Contains(searchString))
+    ' Gibt die gefundenen Elemente zurück.
     Return result
-
   End Function
 
   ''' <summary>
@@ -1989,11 +1997,14 @@ Public Module DataExtensions
   ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function FindByLike(sender As IEnumerable(Of String), likePattern As String, ignoreCase As Boolean) As IEnumerable(Of String)
-
+    ' Deklariert eine Variable, die die Ergebnisse der Suche speichert.
     Dim result As IEnumerable(Of String)
+    ' Führt eine LINQ-Abfrage aus, um alle Elemente in der Sammlung zu finden,
+    ' die dem angegebenen Muster entsprechen. Der Vergleich kann optional
+    ' groß-/kleinschreibungsunabhängig sein, basierend auf dem Parameter "ignoreCase".
     result = From str As String In sender Where If(ignoreCase, str.ToLower Like likePattern.ToLower, str Like likePattern)
+    ' Gibt die gefundenen Elemente zurück.
     Return result
-
   End Function
 
   ''' <summary>
@@ -2008,11 +2019,14 @@ Public Module DataExtensions
   ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function FindByLike(sender As IEnumerable(Of String), likePattern As String) As IEnumerable(Of String)
-
+    ' Deklariert eine Variable, die die Ergebnisse der Suche speichert.
     Dim result As IEnumerable(Of String)
+    ' Führt eine LINQ-Abfrage aus, um alle Elemente in der Sammlung zu finden,
+    ' die dem angegebenen Muster entsprechen. Der Vergleich ist standardmäßig
+    ' groß-/kleinschreibungsabhängig, da der zweite Parameter von If auf False gesetzt ist.
     result = From str As String In sender Where If(False, str.ToLower Like likePattern.ToLower, str Like likePattern)
+    ' Gibt die gefundenen Elemente zurück.
     Return result
-
   End Function
 
 #End Region
@@ -2167,26 +2181,19 @@ Public Module DataExtensions
   ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function Resize(Of T)(sender As T(), NewSize As Integer) As T()
-
     ' Bestimme die minimale Länge zwischen der aktuellen Array-Länge und der neuen Größe
     Dim minLength As Integer = Math.Min(sender.Length, NewSize)
-
     ' Wenn die minimale Länge größer als 0 ist, erstelle ein neues Array und kopiere die Werte
     If minLength > 0 Then
       ' Erstelle ein neues Array mit der angegebenen neuen Größe
       Dim newArray As Array = Array.CreateInstance(sender.GetType.GetElementType, NewSize)
-
       ' Kopiere die Elemente vom alten Array in das neue Array bis zur minimalen Länge
       Array.Copy(sender, newArray, minLength)
-
       ' Gib das neue Array zurück, gecastet auf den ursprünglichen Typ
       Return DirectCast(newArray, T())
-
     Else
-
       ' Wenn die minimale Länge 0 oder kleiner ist, gib das ursprüngliche Array zurück
       Return sender
-
     End If
   End Function
 
