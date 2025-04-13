@@ -993,83 +993,119 @@ Public Module DataExtensions
 #Region "Bestimmen ob ein Wert das vielfache von einem angegebenen Wert ist"
 
   ''' <summary>
-  ''' Bestimmt, ob der Wert ein vielfaches von <paramref name="value"/> ist.
+  ''' Bestimmt, ob der Wert ein Vielfaches von <paramref name="value"/> ist.
   ''' </summary>
   ''' <param name="value">
-  ''' Der Wert.
+  ''' Der Wert, dessen Vielfaches überprüft werden soll.
   ''' </param>
   ''' <returns>
-  ''' <see langword="True"/> wenn der Wert ein vielfaches ist, andernfalls <see langword="False"/>.
+  ''' <see langword="True"/> wenn der Wert ein Vielfaches ist, andernfalls <see langword="False"/>.
   ''' </returns>
+  ''' <remarks>
+  ''' Diese Methode verwendet die interne Funktion <see cref="InternalIsMultipleOf"/>, 
+  ''' um die Berechnung und Prüfung durchzuführen.
+  ''' </remarks>
   <DebuggerStepThrough> <Extension>
   Public Function IsMultipleOf(sender As Short, value As Double) As Boolean
-
+    ' Ruft die interne Funktion auf, um zu überprüfen, ob der übergebene Wert ein Vielfaches des angegebenen Wertes ist.
+    ' Die interne Funktion prüft, ob der Rest der Division von "sender" durch "value" gleich 0 ist.
     Return InternalIsMultipleOf(sender, value)
-
   End Function
 
-  ''' <inheritdoc cref="IsMultipleOf(Short, Double)"/>
+  ''' <summary>
+  ''' Überprüft, ob der übergebene UShort-Wert ein Vielfaches des angegebenen Wertes ist.
+  ''' </summary>
+  ''' <param name="sender">Der zu überprüfende UShort-Wert.</param>
+  ''' <param name="value">Der Wert, dessen Vielfaches überprüft werden soll.</param>
+  ''' <returns>Gibt <see langword="True"/> zurück, wenn der Wert ein Vielfaches ist, andernfalls <see langword="False"/>.</returns>
   <DebuggerStepThrough> <Extension>
   Public Function IsMultipleOf(sender As UShort, value As Double) As Boolean
-
+    ' Ruft die interne Funktion auf, um zu überprüfen, ob der Wert ein Vielfaches des angegebenen Wertes ist.
     Return InternalIsMultipleOf(sender, value)
-
   End Function
 
-  ''' <inheritdoc cref="IsMultipleOf(Short, Double)"/>
+  ''' <summary>
+  ''' Überprüft, ob der übergebene Integer-Wert ein Vielfaches des angegebenen Wertes ist.
+  ''' </summary>
+  ''' <param name="sender">Der zu überprüfende Integer-Wert.</param>
+  ''' <param name="value">Der Wert, dessen Vielfaches überprüft werden soll.</param>
+  ''' <returns>Gibt <see langword="True"/> zurück, wenn der Wert ein Vielfaches ist, andernfalls <see langword="False"/>.</returns>
   <DebuggerStepThrough> <Extension>
   Public Function IsMultipleOf(sender As Integer, value As Double) As Boolean
-
+    ' Ruft die interne Funktion auf, um zu überprüfen, ob der Wert ein Vielfaches des angegebenen Wertes ist.
     Return InternalIsMultipleOf(sender, value)
-
   End Function
 
-  ''' <inheritdoc cref="IsMultipleOf(Short, Double)"/>
+  ''' <summary>
+  ''' Überprüft, ob der übergebene UInteger-Wert ein Vielfaches des angegebenen Wertes ist.
+  ''' </summary>
+  ''' <param name="sender">Der zu überprüfende UInteger-Wert.</param>
+  ''' <param name="value">Der Wert, dessen Vielfaches überprüft werden soll.</param>
+  ''' <returns>Gibt <see langword="True"/> zurück, wenn der Wert ein Vielfaches ist, andernfalls <see langword="False"/>.</returns>
   <DebuggerStepThrough> <Extension>
   Public Function IsMultipleOf(sender As UInteger, value As Double) As Boolean
-
+    ' Ruft die interne Funktion auf, um zu überprüfen, ob der Wert ein Vielfaches des angegebenen Wertes ist.
     Return InternalIsMultipleOf(sender, value)
-
   End Function
 
-  ''' <inheritdoc cref="IsMultipleOf(Short, Double)"/>
+  ''' <summary>
+  ''' Überprüft, ob der übergebene Long-Wert ein Vielfaches des angegebenen Wertes ist.
+  ''' </summary>
+  ''' <param name="sender">Der zu überprüfende Long-Wert.</param>
+  ''' <param name="value">Der Wert, dessen Vielfaches überprüft werden soll.</param>
+  ''' <returns>Gibt <see langword="True"/> zurück, wenn der Wert ein Vielfaches ist, andernfalls <see langword="False"/>.</returns>
   <DebuggerStepThrough> <Extension>
   Public Function IsMultipleOf(sender As Long, value As Double) As Boolean
-
+    ' Ruft die interne Funktion auf, um zu überprüfen, ob der Wert ein Vielfaches des angegebenen Wertes ist.
     Return InternalIsMultipleOf(sender, value)
-
   End Function
 
-  ''' <inheritdoc cref="IsMultipleOf(Short, Double)"/>
+  ''' <summary>
+  ''' Überprüft, ob der übergebene ULong-Wert ein Vielfaches des angegebenen Wertes ist.
+  ''' </summary>
+  ''' <param name="sender">Der zu überprüfende ULong-Wert.</param>
+  ''' <param name="value">Der Wert, dessen Vielfaches überprüft werden soll.</param>
+  ''' <returns>Gibt <see langword="True"/> zurück, wenn der Wert ein Vielfaches ist, andernfalls <see langword="False"/>.</returns>
   <DebuggerStepThrough> <Extension>
   Public Function IsMultipleOf(sender As ULong, value As Double) As Boolean
-
+    ' Ruft die interne Funktion auf, um zu überprüfen, ob der Wert ein Vielfaches des angegebenen Wertes ist.
     Return InternalIsMultipleOf(sender, value)
-
   End Function
 
-  ''' <inheritdoc cref="IsMultipleOf(Short, Double)"/>
+  ''' <summary>
+  ''' Überprüft, ob der übergebene Decimal-Wert ein Vielfaches des angegebenen Wertes ist.
+  ''' </summary>
+  ''' <param name="sender">Der zu überprüfende Decimal-Wert.</param>
+  ''' <param name="value">Der Wert, dessen Vielfaches überprüft werden soll.</param>
+  ''' <returns>Gibt <see langword="True"/> zurück, wenn der Wert ein Vielfaches ist, andernfalls <see langword="False"/>.</returns>
   <DebuggerStepThrough> <Extension>
   Public Function IsMultipleOf(sender As Decimal, value As Double) As Boolean
-
+    ' Ruft die interne Funktion auf, um zu überprüfen, ob der Wert ein Vielfaches des angegebenen Wertes ist.
     Return InternalIsMultipleOf(sender, value)
-
   End Function
 
-  ''' <inheritdoc cref="IsMultipleOf(Short, Double)"/>
+  ''' <summary>
+  ''' Überprüft, ob der übergebene Single-Wert ein Vielfaches des angegebenen Wertes ist.
+  ''' </summary>
+  ''' <param name="sender">Der zu überprüfende Single-Wert.</param>
+  ''' <param name="value">Der Wert, dessen Vielfaches überprüft werden soll.</param>
+  ''' <returns>Gibt <see langword="True"/> zurück, wenn der Wert ein Vielfaches ist, andernfalls <see langword="False"/>.</returns>
   <DebuggerStepThrough> <Extension>
   Public Function IsMultipleOf(sender As Single, value As Double) As Boolean
-
+    ' Ruft die interne Funktion auf, um zu überprüfen, ob der Wert ein Vielfaches des angegebenen Wertes ist.
     Return InternalIsMultipleOf(sender, value)
-
   End Function
 
-  ''' <inheritdoc cref="IsMultipleOf(Short, Double)"/>
+  ''' <summary>
+  ''' Überprüft, ob der übergebene Double-Wert ein Vielfaches des angegebenen Wertes ist.
+  ''' </summary>
+  ''' <param name="sender">Der zu überprüfende Double-Wert.</param>
+  ''' <param name="value">Der Wert, dessen Vielfaches überprüft werden soll.</param>
+  ''' <returns>Gibt <see langword="True"/> zurück, wenn der Wert ein Vielfaches ist, andernfalls <see langword="False"/>.</returns>
   <DebuggerStepThrough> <Extension>
   Public Function IsMultipleOf(sender As Double, value As Double) As Boolean
-
+    ' Ruft die interne Funktion auf, um zu überprüfen, ob der Wert ein Vielfaches des angegebenen Wertes ist.
     Return InternalIsMultipleOf(sender, value)
-
   End Function
 
 #End Region
