@@ -1127,73 +1127,114 @@ Public Module DataExtensions
   ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function IsInRangeOf(sender As Short, min As Double, max As Double) As Boolean
-
+    ' Ruft die interne Funktion auf, um zu überprüfen, ob der Wert innerhalb des angegebenen Bereichs liegt.
+    ' Die interne Funktion prüft, ob der Wert größer oder gleich dem Mindestwert (min) 
+    ' und kleiner oder gleich dem Maximalwert (max) ist.
     Return InternalIsInRangeOf(sender, min, max)
-
   End Function
 
-  ''' <inheritdoc cref="IsInRangeOf(Short, Double, Double)"/>
+  ''' <summary>
+  ''' Überprüft, ob der angegebene UShort-Wert innerhalb des angegebenen Bereichs liegt.
+  ''' </summary>
+  ''' <param name="sender">Der zu überprüfende UShort-Wert.</param>
+  ''' <param name="min">Der Mindestwert des Bereichs.</param>
+  ''' <param name="max">Der Maximalwert des Bereichs.</param>
+  ''' <returns>Gibt <see langword="True"/> zurück, wenn der Wert im Bereich liegt, andernfalls <see langword="False"/>.</returns>
   <DebuggerStepThrough> <Extension>
   Public Function IsInRangeOf(sender As UShort, min As Double, max As Double) As Boolean
-
+    ' Ruft die interne Funktion auf, um zu überprüfen, ob der Wert im Bereich liegt.
     Return InternalIsInRangeOf(sender, min, max)
-
   End Function
 
-  ''' <inheritdoc cref="IsInRangeOf(Short, Double, Double)"/>
+  ''' <summary>
+  ''' Überprüft, ob der angegebene Integer-Wert innerhalb des angegebenen Bereichs liegt.
+  ''' </summary>
+  ''' <param name="sender">Der zu überprüfende Integer-Wert.</param>
+  ''' <param name="min">Der Mindestwert des Bereichs.</param>
+  ''' <param name="max">Der Maximalwert des Bereichs.</param>
+  ''' <returns>Gibt <see langword="True"/> zurück, wenn der Wert im Bereich liegt, andernfalls <see langword="False"/>.</returns>
   <DebuggerStepThrough> <Extension>
   Public Function IsInRangeOf(sender As Integer, min As Double, max As Double) As Boolean
-
+    ' Ruft die interne Funktion auf, um zu überprüfen, ob der Wert im Bereich liegt.
     Return InternalIsInRangeOf(sender, min, max)
-
   End Function
 
-  ''' <inheritdoc cref="IsInRangeOf(Short, Double, Double)"/>
+  ''' <summary>
+  ''' Überprüft, ob der angegebene UInteger-Wert innerhalb des angegebenen Bereichs liegt.
+  ''' </summary>
+  ''' <param name="sender">Der zu überprüfende UInteger-Wert.</param>
+  ''' <param name="min">Der Mindestwert des Bereichs.</param>
+  ''' <param name="max">Der Maximalwert des Bereichs.</param>
+  ''' <returns>Gibt <see langword="True"/> zurück, wenn der Wert im Bereich liegt, andernfalls <see langword="False"/>.</returns>
   <DebuggerStepThrough> <Extension>
   Public Function IsInRangeOf(sender As UInteger, min As Double, max As Double) As Boolean
-
+    ' Ruft die interne Funktion auf, um zu überprüfen, ob der Wert im Bereich liegt.
     Return InternalIsInRangeOf(sender, min, max)
-
   End Function
 
-  ''' <inheritdoc cref="IsInRangeOf(Short, Double, Double)"/>
+  ''' <summary>
+  ''' Überprüft, ob der angegebene Long-Wert innerhalb des angegebenen Bereichs liegt.
+  ''' </summary>
+  ''' <param name="sender">Der zu überprüfende Long-Wert.</param>
+  ''' <param name="min">Der Mindestwert des Bereichs.</param>
+  ''' <param name="max">Der Maximalwert des Bereichs.</param>
+  ''' <returns>Gibt <see langword="True"/> zurück, wenn der Wert im Bereich liegt, andernfalls <see langword="False"/>.</returns>
   <DebuggerStepThrough> <Extension>
   Public Function IsInRangeOf(sender As Long, min As Double, max As Double) As Boolean
-
+    ' Ruft die interne Funktion auf, um zu überprüfen, ob der Wert im Bereich liegt.
     Return InternalIsInRangeOf(sender, min, max)
-
   End Function
 
-  ''' <inheritdoc cref="IsInRangeOf(Short, Double, Double)"/>
+  ''' <summary>
+  ''' Überprüft, ob der angegebene ULong-Wert innerhalb des angegebenen Bereichs liegt.
+  ''' </summary>
+  ''' <param name="sender">Der zu überprüfende ULong-Wert.</param>
+  ''' <param name="min">Der Mindestwert des Bereichs.</param>
+  ''' <param name="max">Der Maximalwert des Bereichs.</param>
+  ''' <returns>Gibt <see langword="True"/> zurück, wenn der Wert im Bereich liegt, andernfalls <see langword="False"/>.</returns>
   <DebuggerStepThrough> <Extension>
   Public Function IsInRangeOf(sender As ULong, min As Double, max As Double) As Boolean
-
+    ' Ruft die interne Funktion auf, um zu überprüfen, ob der Wert im Bereich liegt.
     Return InternalIsInRangeOf(sender, min, max)
-
   End Function
 
-  ''' <inheritdoc cref="IsInRangeOf(Short, Double, Double)"/>
+  ''' <summary>
+  ''' Überprüft, ob der angegebene Decimal-Wert innerhalb des angegebenen Bereichs liegt.
+  ''' </summary>
+  ''' <param name="sender">Der zu überprüfende Decimal-Wert.</param>
+  ''' <param name="min">Der Mindestwert des Bereichs.</param>
+  ''' <param name="max">Der Maximalwert des Bereichs.</param>
+  ''' <returns>Gibt <see langword="True"/> zurück, wenn der Wert im Bereich liegt, andernfalls <see langword="False"/>.</returns>
   <DebuggerStepThrough> <Extension>
   Public Function IsInRangeOf(sender As Decimal, min As Double, max As Double) As Boolean
-
+    ' Ruft die interne Funktion auf, um zu überprüfen, ob der Wert im Bereich liegt.
     Return InternalIsInRangeOf(sender, min, max)
-
   End Function
 
-  ''' <inheritdoc cref="IsInRangeOf(Short, Double, Double)"/>
+  ''' <summary>
+  ''' Überprüft, ob der angegebene Single-Wert innerhalb des angegebenen Bereichs liegt.
+  ''' </summary>
+  ''' <param name="sender">Der zu überprüfende Single-Wert.</param>
+  ''' <param name="min">Der Mindestwert des Bereichs.</param>
+  ''' <param name="max">Der Maximalwert des Bereichs.</param>
+  ''' <returns>Gibt <see langword="True"/> zurück, wenn der Wert im Bereich liegt, andernfalls <see langword="False"/>.</returns>
   <DebuggerStepThrough> <Extension>
   Public Function IsInRangeOf(sender As Single, min As Double, max As Double) As Boolean
-
+    ' Ruft die interne Funktion auf, um zu überprüfen, ob der Wert im Bereich liegt.
     Return InternalIsInRangeOf(sender, min, max)
-
   End Function
 
-  ''' <inheritdoc cref="IsInRangeOf(Short, Double, Double)"/>
+  ''' <summary>
+  ''' Überprüft, ob der angegebene Double-Wert innerhalb des angegebenen Bereichs liegt.
+  ''' </summary>
+  ''' <param name="sender">Der zu überprüfende Double-Wert.</param>
+  ''' <param name="min">Der Mindestwert des Bereichs.</param>
+  ''' <param name="max">Der Maximalwert des Bereichs.</param>
+  ''' <returns>Gibt <see langword="True"/> zurück, wenn der Wert im Bereich liegt, andernfalls <see langword="False"/>.</returns>
   <DebuggerStepThrough> <Extension>
   Public Function IsInRangeOf(sender As Double, min As Double, max As Double) As Boolean
-
+    ' Ruft die interne Funktion auf, um zu überprüfen, ob der Wert im Bereich liegt.
     Return InternalIsInRangeOf(sender, min, max)
-
   End Function
 
 #End Region
