@@ -1874,32 +1874,40 @@ Public Module DataExtensions
   ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function CountEmptyItems(sender As IEnumerable(Of String)) As Integer
-
+    ' Initialisiere die Zählvariable für leere Elemente
     Dim result As Integer = 0
+    ' Iteriere durch jedes Element in der Sammlung
     For Each str As String In sender
-
-      If String.IsNullOrEmpty(str) OrElse String.IsNullOrWhiteSpace(str) Then result += 1
-
+      ' Überprüfe, ob das aktuelle Element leer oder nur aus Leerzeichen besteht
+      If String.IsNullOrEmpty(str) OrElse String.IsNullOrWhiteSpace(str) Then
+        ' Erhöhe den Zähler, wenn das Element leer ist
+        result += 1
+      End If
     Next
+    ' Gib die Gesamtanzahl der leeren Elemente zurück
     Return result
-
   End Function
 
   ''' <summary>
   ''' Zählt die nicht leeren Elemente eines <see cref="IEnumerable(Of String)"/>.
   ''' </summary>
   ''' <returns>
-  ''' Die anzahl der nicht leeren Elemente.
+  ''' Die Anzahl der nicht leeren Elemente.
   ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function CountNonEmptyItems(sender As IEnumerable(Of String)) As Integer
-
+    ' Initialisiere eine Variable, um die Anzahl der nicht leeren Elemente zu speichern
     Dim result As Integer = 0
+    ' Iteriere durch jedes Element in der übergebenen Sammlung
     For Each str As String In sender
-      If Not String.IsNullOrEmpty(str) AndAlso Not String.IsNullOrWhiteSpace(str) Then result += 1
+      ' Überprüfe, ob das aktuelle Element weder null noch leer ist und keine Leerzeichen enthält
+      If Not String.IsNullOrEmpty(str) AndAlso Not String.IsNullOrWhiteSpace(str) Then
+        ' Erhöhe den Zähler für nicht leere Elemente
+        result += 1
+      End If
     Next
+    ' Gib die Gesamtanzahl der nicht leeren Elemente zurück
     Return result
-
   End Function
 
 #End Region
