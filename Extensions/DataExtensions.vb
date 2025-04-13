@@ -1245,76 +1245,111 @@ Public Module DataExtensions
   ''' Gibt die Differenz zwischen dem Wert und <paramref name="value"/> zurück.
   ''' </summary>
   ''' <param name="value">
-  ''' Der Wert.
+  ''' Der Wert, mit dem die Differenz berechnet wird.
   ''' </param>
   ''' <returns>
-  ''' Die Differenz.
+  ''' Die berechnete Differenz zwischen dem Quellwert und dem angegebenen Wert.
   ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function DifferenceOf(sender As Short, value As Double) As Double
-
+    ' Ruft die interne Funktion auf, um die Differenz zu berechnen.
     Return InternalDifferenceOf(sender, value)
-
   End Function
 
-  ''' <inheritdoc cref="DifferenceOf(Short, Double)"/>
+  ''' <summary>
+  ''' Berechnet die Differenz zwischen dem aktuellen Wert und einem angegebenen Wert.
+  ''' </summary>
+  ''' <param name="sender">Der aktuelle Wert, von dem die Differenz berechnet wird.</param>
+  ''' <param name="value">Der Vergleichswert, mit dem die Differenz berechnet wird.</param>
+  ''' <returns>Die berechnete Differenz als Double.</returns>
   <DebuggerStepThrough> <Extension>
   Public Function DifferenceOf(sender As UShort, value As Double) As Double
-
+    ' Ruft die interne Funktion auf, um die Differenz zu berechnen.
     Return InternalDifferenceOf(sender, value)
-
   End Function
 
-  ''' <inheritdoc cref="DifferenceOf(Short, Double)"/>
+  ''' <summary>
+  ''' Berechnet die Differenz zwischen dem aktuellen Wert und einem angegebenen Wert.
+  ''' </summary>
+  ''' <param name="sender">Der aktuelle Wert, von dem die Differenz berechnet wird.</param>
+  ''' <param name="value">Der Vergleichswert, mit dem die Differenz berechnet wird.</param>
+  ''' <returns>Die berechnete Differenz als Double.</returns>
   <DebuggerStepThrough> <Extension>
   Public Function DifferenceOf(sender As Integer, value As Double) As Double
-
+    ' Ruft die interne Funktion auf, um die Differenz zu berechnen.
     Return InternalDifferenceOf(sender, value)
-
   End Function
 
-  ''' <inheritdoc cref="DifferenceOf(Short, Double)"/>
+  ''' <summary>
+  ''' Berechnet die Differenz zwischen dem aktuellen Wert und einem angegebenen Wert.
+  ''' </summary>
+  ''' <param name="sender">Der aktuelle Wert, von dem die Differenz berechnet wird.</param>
+  ''' <param name="value">Der Vergleichswert, mit dem die Differenz berechnet wird.</param>
+  ''' <returns>Die berechnete Differenz als Double.</returns>
   <DebuggerStepThrough> <Extension>
   Public Function DifferenceOf(sender As UInteger, value As Double) As Double
-
+    ' Ruft die interne Funktion auf, um die Differenz zu berechnen.
     Return InternalDifferenceOf(sender, value)
-
   End Function
 
-  ''' <inheritdoc cref="DifferenceOf(Short, Double)"/>
+  ''' <summary>
+  ''' Berechnet die Differenz zwischen dem aktuellen Wert und einem angegebenen Wert.
+  ''' </summary>
+  ''' <param name="sender">Der aktuelle Wert, von dem die Differenz berechnet wird.</param>
+  ''' <param name="value">Der Vergleichswert, mit dem die Differenz berechnet wird.</param>
+  ''' <returns>Die berechnete Differenz als Double.</returns>
   <DebuggerStepThrough> <Extension>
   Public Function DifferenceOf(sender As Long, value As Double) As Double
-
+    ' Ruft die interne Funktion auf, um die Differenz zu berechnen.
     Return InternalDifferenceOf(sender, value)
-
   End Function
 
-  ''' <inheritdoc cref="DifferenceOf(Short, Double)"/>
+  ''' <summary>
+  ''' Berechnet die Differenz zwischen dem aktuellen Wert und einem angegebenen Wert.
+  ''' </summary>
+  ''' <param name="sender">Der aktuelle Wert, von dem die Differenz berechnet wird.</param>
+  ''' <param name="value">Der Vergleichswert, mit dem die Differenz berechnet wird.</param>
+  ''' <returns>Die berechnete Differenz als Double.</returns>
   <DebuggerStepThrough> <Extension>
   Public Function DifferenceOf(sender As ULong, value As Double) As Double
+    ' Ruft die interne Funktion auf, um die Differenz zu berechnen.
     Return InternalDifferenceOf(sender, value)
   End Function
 
-  ''' <inheritdoc cref="DifferenceOf(Short, Double)"/>
+  ''' <summary>
+  ''' Berechnet die Differenz zwischen dem aktuellen Wert und einem angegebenen Wert.
+  ''' </summary>
+  ''' <param name="sender">Der aktuelle Wert, von dem die Differenz berechnet wird.</param>
+  ''' <param name="value">Der Vergleichswert, mit dem die Differenz berechnet wird.</param>
+  ''' <returns>Die berechnete Differenz als Double.</returns>
   <DebuggerStepThrough> <Extension>
   Public Function DifferenceOf(sender As Decimal, value As Double) As Double
+    ' Ruft die interne Funktion auf, um die Differenz zu berechnen.
     Return InternalDifferenceOf(sender, value)
   End Function
 
-  ''' <inheritdoc cref="DifferenceOf(Short, Double)"/>
+  ''' <summary>
+  ''' Berechnet die Differenz zwischen dem aktuellen Wert und einem angegebenen Wert.
+  ''' </summary>
+  ''' <param name="sender">Der aktuelle Wert, von dem die Differenz berechnet wird.</param>
+  ''' <param name="value">Der Vergleichswert, mit dem die Differenz berechnet wird.</param>
+  ''' <returns>Die berechnete Differenz als Double.</returns>
   <DebuggerStepThrough> <Extension>
   Public Function DifferenceOf(sender As Single, value As Double) As Double
-
+    ' Ruft die interne Funktion auf, um die Differenz zu berechnen.
     Return InternalDifferenceOf(sender, value)
-
   End Function
 
-  ''' <inheritdoc cref="DifferenceOf(Short, Double)"/>
+  ''' <summary>
+  ''' Berechnet die Differenz zwischen dem aktuellen Wert und einem angegebenen Wert.
+  ''' </summary>
+  ''' <param name="sender">Der aktuelle Wert, von dem die Differenz berechnet wird.</param>
+  ''' <param name="value">Der Vergleichswert, mit dem die Differenz berechnet wird.</param>
+  ''' <returns>Die berechnete Differenz als Double.</returns>
   <DebuggerStepThrough> <Extension>
   Public Function DifferenceOf(sender As Double, value As Double) As Double
-
+    ' Ruft die interne Funktion auf, um die Differenz zu berechnen.
     Return InternalDifferenceOf(sender, value)
-
   End Function
 
 #End Region
