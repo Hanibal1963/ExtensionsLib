@@ -2076,16 +2076,17 @@ Public Module DataExtensions
   ''' Die Zeichenfolge, nach der gesucht werden soll.
   ''' </param>
   ''' <param name="stringComparison">
-  ''' Die Zeichenfolgenvergleichsregel.
+  ''' Die Zeichenfolgenvergleichsregel, die angibt, wie die Zeichenfolgen verglichen werden sollen (z. B. Groß-/Kleinschreibung beachten oder nicht).
   ''' </param>
   ''' <returns>
-  ''' Die übrigen Elemente in <see cref="IEnumerable(Of String)"/>.
+  ''' Die übrigen Elemente in <see cref="IEnumerable(Of String)"/>, die nicht mit der angegebenen Zeichenfolge übereinstimmen.
   ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function RemoveExact(sender As IEnumerable(Of String), searchString As String, stringComparison As StringComparison) As IEnumerable(Of String)
-
+    ' Verwendet eine LINQ-Abfrage, um alle Elemente in der Sammlung zu filtern,
+    ' die nicht genau mit der angegebenen Zeichenfolge übereinstimmen.
+    ' Die Vergleichsregel wird durch den Parameter "stringComparison" bestimmt.
     Return From value As String In sender Where Not value.Equals(searchString, stringComparison)
-
   End Function
 
   ''' <summary>
@@ -2102,11 +2103,14 @@ Public Module DataExtensions
   ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function RemoveByContains(sender As IEnumerable(Of String), searchString As String, ignoreCase As Boolean) As IEnumerable(Of String)
-
+    ' Deklariert eine Variable, die die Ergebnisse der gefilterten Sammlung speichert.
     Dim result As IEnumerable(Of String)
+    ' Führt eine LINQ-Abfrage aus, um alle Elemente in der Sammlung zu filtern.
+    ' Wenn "ignoreCase" True ist, wird ein groß-/kleinschreibungsunabhängiger Vergleich durchgeführt.
+    ' Andernfalls wird ein groß-/kleinschreibungsabhängiger Vergleich verwendet.
     result = From str As String In sender Where If(ignoreCase, Not str.ToLower.Contains(searchString.ToLower), Not str.Contains(searchString))
+    ' Gibt die gefilterte Sammlung zurück, die keine Elemente enthält, die die Suchzeichenfolge enthalten.
     Return result
-
   End Function
 
   ''' <summary>
@@ -2120,11 +2124,15 @@ Public Module DataExtensions
   ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function RemoveByContains(sender As IEnumerable(Of String), searchString As String) As IEnumerable(Of String)
-
+    ' Deklariert eine Variable, die die Ergebnisse der gefilterten Sammlung speichert.
     Dim result As IEnumerable(Of String)
+    ' Führt eine LINQ-Abfrage aus, um alle Elemente in der Sammlung zu filtern.
+    ' Überprüft, ob die Elemente die Suchzeichenfolge enthalten.
+    ' Wenn die Zeichenfolge enthalten ist, wird das Element ausgeschlossen.
+    ' Der Vergleich ist standardmäßig groß-/kleinschreibungsabhängig.
     result = From str As String In sender Where If(False, Not str.ToLower.Contains(searchString.ToLower), Not str.Contains(searchString))
+    ' Gibt die gefilterte Sammlung zurück, die keine Elemente enthält, die die Suchzeichenfolge enthalten.
     Return result
-
   End Function
 
   ''' <summary>
@@ -2141,11 +2149,14 @@ Public Module DataExtensions
   ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function RemoveByLike(sender As IEnumerable(Of String), likePattern As String, ignoreCase As Boolean) As IEnumerable(Of String)
-
+    ' Deklariert eine Variable, die die Ergebnisse der gefilterten Sammlung speichert.
     Dim result As IEnumerable(Of String)
+    ' Führt eine LINQ-Abfrage aus, um alle Elemente in der Sammlung zu filtern.
+    ' Wenn "ignoreCase" True ist, wird ein groß-/kleinschreibungsunabhängiger Vergleich durchgeführt.
+    ' Andernfalls wird ein groß-/kleinschreibungsabhängiger Vergleich verwendet.
     result = From str As String In sender Where If(ignoreCase, Not str.ToLower Like likePattern.ToLower, Not str Like likePattern)
+    ' Gibt die gefilterte Sammlung zurück, die keine Elemente enthält, die dem Muster entsprechen.
     Return result
-
   End Function
 
   ''' <summary>
@@ -2159,11 +2170,15 @@ Public Module DataExtensions
   ''' </returns>
   <DebuggerStepThrough> <Extension>
   Public Function RemoveByLike(sender As IEnumerable(Of String), likePattern As String) As IEnumerable(Of String)
-
+    ' Deklariert eine Variable, die die Ergebnisse der gefilterten Sammlung speichert.
     Dim result As IEnumerable(Of String)
+    ' Führt eine LINQ-Abfrage aus, um alle Elemente in der Sammlung zu filtern.
+    ' Überprüft, ob die Elemente dem angegebenen Muster entsprechen.
+    ' Wenn ein Element dem Muster entspricht, wird es ausgeschlossen.
+    ' Der Vergleich ist standardmäßig groß-/kleinschreibungsabhängig.
     result = From str As String In sender Where If(False, Not str.ToLower Like likePattern.ToLower, Not str Like likePattern)
+    ' Gibt die gefilterte Sammlung zurück, die keine Elemente enthält, die dem Muster entsprechen.
     Return result
-
   End Function
 
 #End Region
