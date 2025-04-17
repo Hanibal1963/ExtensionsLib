@@ -7,7 +7,7 @@
 ' 
 ' *************************************************************************************************
 
-Module NativeMethods
+Friend Module NativeMethods
 
   ''' <summary>
   ''' Zerstört ein Symbol und gibt jeglichen Speicher frei, den das Symbol belegt hat.
