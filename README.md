@@ -21,7 +21,7 @@ Die Datei `BitmapExtensions.vb` enthält eine Sammlung von Erweiterungsmethoden f
 Beispiel:
 
 ```vb
-Dim result As Double = 50.PercentageOf(200) ' Ergebnis: 25.0
+Dim result As Double = 50.PercentageOf(200) ' Ergebnis: 25,0
 ```
 
 ### 1.2. Bruchteilberechnungen
@@ -29,6 +29,12 @@ Dim result As Double = 50.PercentageOf(200) ' Ergebnis: 25.0
 - **`FractionBy`**  
   Berechnet den Bruchteil eines Wertes basierend auf einem Prozentsatz.  
   **Unterstützte Typen:** `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, `Double`.
+
+Beispiel:
+
+```vb
+Dim result as Double = 95.FractionBy(50) ' Ergebnis: 47,5
+```
 
 ### 1.3. Prüfung auf positive oder negative Werte
 

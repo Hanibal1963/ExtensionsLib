@@ -29,7 +29,7 @@ Public Class FractionByControl
     For i As Double = 5 To 100 Step 5
 
       ' Zeile formatieren
-      line = $"{i.FractionBy(persentage),-5}| {i,-15}| {persentage,-5}{vbCrLf}"
+      line = $"{i.FractionBy(persentage),-5}| {persentage,-15}| {i,-5}{vbCrLf}"
 
       ' Zeile anhängen
       Me.TextBox1.Text &= line
