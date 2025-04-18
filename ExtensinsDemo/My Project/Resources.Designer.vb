@@ -59,5 +59,21 @@ Namespace My.Resources
                 resourceCulture = value
             End Set
         End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Demo der Erweiterungsfunktion PercentageOf
+        '''
+        '''Berechnet den Prozentsatz eines Wertes im Verhältnis zu einem Gesamtwert.
+        '''
+        '''Unterstützte Typen: 
+        '''Short, UShort, Integer, UInteger, Long, ULong, Decimal, Single, Double.
+        '''
+        ''' ähnelt.
+        '''</summary>
+        Friend ReadOnly Property PercentageOf_InfoText() As String
+            Get
+                Return ResourceManager.GetString("PercentageOf_InfoText", resourceCulture)
+            End Get
+        End Property
     End Module
 End Namespace
