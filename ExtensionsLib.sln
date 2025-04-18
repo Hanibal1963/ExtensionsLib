@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ExtensinsDemo", "ExtensinsDemo\ExtensinsDemo.vbproj", "{E5FBCC71-2B9B-43D3-B802-AA4845C7926E}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ExtensionsDemo", "ExtensinsDemo\ExtensionsDemo.vbproj", "{E5FBCC71-2B9B-43D3-B802-AA4845C7926E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

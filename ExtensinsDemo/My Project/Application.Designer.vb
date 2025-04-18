@@ -29,13 +29,13 @@ Namespace My
             Me.SaveMySettingsOnExit = true
             Me.ShutDownStyle = Global.Microsoft.VisualBasic.ApplicationServices.ShutdownMode.AfterMainFormCloses
         End Sub
-
-    <Global.System.Diagnostics.DebuggerStepThroughAttribute()>
-    Protected Overrides Sub OnCreateMainForm()
-      Me.MainForm = Global.SchlumpfSoft.ExtensinsDemo.FormMain
+        
+        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
+        Protected Overrides Sub OnCreateMainForm()
+      Me.MainForm = Global.SchlumpfSoft.ExtensionsDemo.FormMain
     End Sub
-
-    <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
+        
+        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Function OnInitialize(ByVal commandLineArgs As System.Collections.ObjectModel.ReadOnlyCollection(Of String)) As Boolean
             Me.MinimumSplashScreenDisplayTime = 0
             Return MyBase.OnInitialize(commandLineArgs)

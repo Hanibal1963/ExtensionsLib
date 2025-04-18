@@ -9,10 +9,10 @@ Imports System.Runtime.InteropServices
 
 ' Werte der Assemblyattribute überprüfen
 
-<Assembly: AssemblyTitle("ExtensinsDemo")>
+<Assembly: AssemblyTitle("ExtensionsDemo")>
 <Assembly: AssemblyDescription("Demoprogramm für ExtensionsLib")>
 <Assembly: AssemblyCompany("SchlumpfSoft")>
-<Assembly: AssemblyProduct("ExtensinsDemo")>
+<Assembly: AssemblyProduct("ExtensionsDemo")>
 <Assembly: AssemblyCopyright("Copyright © Andreas Sauer 2025")>
 <Assembly: AssemblyTrademark("privat")>
 

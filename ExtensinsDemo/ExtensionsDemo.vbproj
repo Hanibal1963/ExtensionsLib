@@ -6,9 +6,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E5FBCC71-2B9B-43D3-B802-AA4845C7926E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>SchlumpfSoft.ExtensinsDemo.My.MyApplication</StartupObject>
-    <RootNamespace>SchlumpfSoft.ExtensinsDemo</RootNamespace>
-    <AssemblyName>ExtensinsDemo</AssemblyName>
+    <StartupObject>SchlumpfSoft.ExtensionsDemo.My.MyApplication</StartupObject>
+    <RootNamespace>SchlumpfSoft.ExtensionsDemo</RootNamespace>
+    <AssemblyName>ExtensionsDemo</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
@@ -22,7 +22,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>ExtensinsDemo.xml</DocumentationFile>
+    <DocumentationFile>ExtensionsDemo.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -32,7 +32,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>ExtensinsDemo.xml</DocumentationFile>
+    <DocumentationFile>ExtensionsDemo.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -80,6 +80,12 @@
       <DependentUpon>FormMain.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FractionByControl.Designer.vb">
+      <DependentUpon>FractionByControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FractionByControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -96,13 +102,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="PercentageOfControl.Designer.vb">
+      <DependentUpon>PercentageOfControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PercentageOfControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FractionByControl.resx">
+      <DependentUpon>FractionByControl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PercentageOfControl.resx">
+      <DependentUpon>PercentageOfControl.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
