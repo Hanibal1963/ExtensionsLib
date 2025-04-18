@@ -44,6 +44,8 @@ Public Class FormMain
         Me.FractionByControl.Dock = DockStyle.Fill
         Me.FractionByControl.Start()
       Case e.TabPage Is Me.TabPageSignTest
+        Me.SignTestControl.Dock = DockStyle.Fill
+        Me.SignTestControl.Start()
       Case e.TabPage Is Me.TabPageIsPrime
       Case e.TabPage Is Me.TabPageDivisibilityAndMultiples
       Case e.TabPage Is Me.TabPageIsInRangeOf

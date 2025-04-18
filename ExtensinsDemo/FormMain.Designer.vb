@@ -51,12 +51,14 @@ Partial Class FormMain
         Me.TabPageFormatted = New System.Windows.Forms.TabPage()
         Me.TabPageStringCollections = New System.Windows.Forms.TabPage()
         Me.MainMenu = New System.Windows.Forms.MenuStrip()
+        Me.SignTestControl = New SchlumpfSoft.ExtensionsDemo.SignTestControl()
         MainMenuItemDatei = New System.Windows.Forms.ToolStripMenuItem()
         MainMenuItemAnsicht = New System.Windows.Forms.ToolStripMenuItem()
         MainMenuItemHilfe = New System.Windows.Forms.ToolStripMenuItem()
         Me.TabControl.SuspendLayout()
         Me.TabPagePercentageOf.SuspendLayout()
         Me.TabPageFractionBy.SuspendLayout()
+        Me.TabPageSignTest.SuspendLayout()
         Me.MainMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -211,6 +213,7 @@ Partial Class FormMain
         '
         'TabPageSignTest
         '
+        Me.TabPageSignTest.Controls.Add(Me.SignTestControl)
         Me.TabPageSignTest.Location = New System.Drawing.Point(4, 40)
         Me.TabPageSignTest.Name = "TabPageSignTest"
         Me.TabPageSignTest.Padding = New System.Windows.Forms.Padding(3)
@@ -297,6 +300,13 @@ Partial Class FormMain
         Me.MainMenu.TabIndex = 1
         Me.MainMenu.Text = "MainMenu"
         '
+        'SignTestControl
+        '
+        Me.SignTestControl.Location = New System.Drawing.Point(81, 42)
+        Me.SignTestControl.Name = "SignTestControl"
+        Me.SignTestControl.Size = New System.Drawing.Size(355, 234)
+        Me.SignTestControl.TabIndex = 0
+        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -310,6 +320,7 @@ Partial Class FormMain
         Me.TabControl.ResumeLayout(False)
         Me.TabPagePercentageOf.ResumeLayout(False)
         Me.TabPageFractionBy.ResumeLayout(False)
+        Me.TabPageSignTest.ResumeLayout(False)
         Me.MainMenu.ResumeLayout(False)
         Me.MainMenu.PerformLayout()
         Me.ResumeLayout(False)
@@ -343,4 +354,5 @@ Partial Class FormMain
   Private WithEvents MenuItemStringCollections As ToolStripMenuItem
     Private WithEvents PercentageOfControl As PercentageOfControl
     Private WithEvents FractionByControl As FractionByControl
+    Private WithEvents SignTestControl As SignTestControl
 End Class
