@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ExtensinsDemo", "ExtensinsDemo\ExtensinsDemo.vbproj", "{E5FBCC71-2B9B-43D3-B802-AA4845C7926E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{26C481BC-ADA5-4534-8925-7B0CC51F2DD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26C481BC-ADA5-4534-8925-7B0CC51F2DD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26C481BC-ADA5-4534-8925-7B0CC51F2DD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5FBCC71-2B9B-43D3-B802-AA4845C7926E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5FBCC71-2B9B-43D3-B802-AA4845C7926E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5FBCC71-2B9B-43D3-B802-AA4845C7926E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5FBCC71-2B9B-43D3-B802-AA4845C7926E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
