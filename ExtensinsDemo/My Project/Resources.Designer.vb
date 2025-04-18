@@ -61,7 +61,25 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Demo der Erweiterungsfunktion FractionBy
+        '''========================================
+        '''
+        '''Berechnet den Bruchteil eines Wertes basierend auf einem Prozentsatz.
+        '''
+        '''Unterstützte Typen:
+        '''Short, UShort, Integer, UInteger, Long, ULong, Decimal, Single, Double.
+        '''
+        ''' ähnelt.
+        '''</summary>
+        Friend ReadOnly Property FractionBy_InfoText() As String
+            Get
+                Return ResourceManager.GetString("FractionBy_InfoText", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Demo der Erweiterungsfunktion PercentageOf
+        '''==========================================
         '''
         '''Berechnet den Prozentsatz eines Wertes im Verhältnis zu einem Gesamtwert.
         '''

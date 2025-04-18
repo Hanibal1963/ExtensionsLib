@@ -15,6 +15,8 @@ Public Class PercentageOfControl
 
     ' Monospace-Schriftart für die TextBox setzen
     Me.TextBox1.Font = New Font("Courier New", 10)
+
+    ' Infotext laden
     Me.TextBox1.Text = My.Resources.PercentageOf_InfoText
 
     ' Kopfzeile erstellen
@@ -22,11 +24,12 @@ Public Class PercentageOfControl
     Me.TextBox1.Text &= header
     Me.TextBox1.Text &= New String("-"c, header.Length) & vbCrLf
 
+    Dim line As String
     Dim total As Double = 50
     For i As Double = 5 To 100 Step 5
 
       ' Zeile formatieren
-      Dim line As String = $"{i,-5}| {i.PercentageOf(total),-15}| {total,-5}{vbCrLf}"
+      line = $"{i,-5}| {i.PercentageOf(total),-15}| {total,-5}{vbCrLf}"
 
       ' Zeile anhängen
       Me.TextBox1.Text &= line
