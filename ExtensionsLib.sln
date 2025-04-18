@@ -4,8 +4,6 @@ VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Extensions", "Extensions\Extensions.vbproj", "{26C481BC-ADA5-4534-8925-7B0CC51F2DD3}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TestProject", "TestProject\TestProject.vbproj", "{973850AB-5541-43C5-A4B3-2B8BEABFCBDD}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
@@ -23,10 +21,6 @@ Global
 		{26C481BC-ADA5-4534-8925-7B0CC51F2DD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26C481BC-ADA5-4534-8925-7B0CC51F2DD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26C481BC-ADA5-4534-8925-7B0CC51F2DD3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{973850AB-5541-43C5-A4B3-2B8BEABFCBDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{973850AB-5541-43C5-A4B3-2B8BEABFCBDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{973850AB-5541-43C5-A4B3-2B8BEABFCBDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{973850AB-5541-43C5-A4B3-2B8BEABFCBDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
