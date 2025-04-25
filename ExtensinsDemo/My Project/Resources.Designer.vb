@@ -93,5 +93,14 @@ Namespace My.Resources
                 Return ResourceManager.GetString("PercentageOf_InfoText", resourceCulture)
             End Get
         End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        '''</summary>
+        Friend ReadOnly Property SignTest_InfoText() As String
+            Get
+                Return ResourceManager.GetString("SignTest_InfoText", resourceCulture)
+            End Get
+        End Property
     End Module
 End Namespace

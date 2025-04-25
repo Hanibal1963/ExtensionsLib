@@ -1,0 +1,8 @@
+﻿Demo der Erweiterungsfunktinen isPositive und isNegative
+========================================================
+
+Diese Funktionen teyte ob ein Wert positiv oder negativ ist.
+
+Unterstützte Typen: 
+Short, UShort, Integer, UInteger, Long, ULong, Decimal, Single, Double.
+
