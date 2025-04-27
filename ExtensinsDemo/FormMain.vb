@@ -17,7 +17,9 @@ Public Class FormMain
     MenuItemDifferenceOf.Click, MenuItemHexadecimalConversion.Click,
     MenuItemFormatted.Click, MenuItemStringCollections.Click
 
+    ' welches Menü wurde angeklickt
     Select Case True
+
       Case sender Is Me.MenuItemBeenden : Me.Close()
       Case sender Is Me.MenuItemÜber : Me.ShowAboutDialog()
       Case sender Is Me.MenuItemPercentageOf : Me.TabControl.SelectTab($"TabPagePercentageOf")
@@ -30,29 +32,44 @@ Public Class FormMain
       Case sender Is Me.MenuItemHexadecimalConversion : Me.TabControl.SelectTab($"TabPageHexadecimalConversion")
       Case sender Is Me.MenuItemFormatted : Me.TabControl.SelectTab($"TabPageFormatted")
       Case sender Is Me.MenuItemStringCollections : Me.TabControl.SelectTab($"TabPageStringCollections")
+
     End Select
 
   End Sub
 
   Private Sub TabControl_Selected(sender As Object, e As TabControlEventArgs) Handles TabControl.Selected
 
+    ' welche Registerkarte wurde aktiviert
     Select Case True
+
       Case e.TabPage Is Me.TabPagePercentageOf
         Me.PercentageOfControl.Dock = DockStyle.Fill
         Me.PercentageOfControl.Start()
+
       Case e.TabPage Is Me.TabPageFractionBy
         Me.FractionByControl.Dock = DockStyle.Fill
         Me.FractionByControl.Start()
+
       Case e.TabPage Is Me.TabPageSignTest
         Me.SignTestControl.Dock = DockStyle.Fill
         Me.SignTestControl.Start()
+
       Case e.TabPage Is Me.TabPageIsPrime
+        Me.IsPrimeControl.Dock = DockStyle.Fill
+        Me.IsPrimeControl.Start()
+
       Case e.TabPage Is Me.TabPageDivisibilityAndMultiples
+
       Case e.TabPage Is Me.TabPageIsInRangeOf
+
       Case e.TabPage Is Me.TabPageDifferenceOf
+
       Case e.TabPage Is Me.TabPageHexadecimalConversion
+
       Case e.TabPage Is Me.TabPageFormatted
+
       Case e.TabPage Is Me.TabPageStringCollections
+
     End Select
 
   End Sub
@@ -64,9 +81,12 @@ Public Class FormMain
   End Sub
 
   Private Sub FormMain_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+
+    ' aktiviert beim erstmaligem anzeigen des Fensters die erste Registerkarte
     Me.TabControl.SelectTab($"TabPagePercentageOf")
     Me.PercentageOfControl.Dock = DockStyle.Fill
     Me.PercentageOfControl.Start()
+
   End Sub
 
 End Class

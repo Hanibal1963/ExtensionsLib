@@ -86,6 +86,12 @@
     <Compile Include="FractionByControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="IsPrimeControl.Designer.vb">
+      <DependentUpon>IsPrimeControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IsPrimeControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -122,6 +128,9 @@
     <EmbeddedResource Include="FractionByControl.resx">
       <DependentUpon>FractionByControl.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IsPrimeControl.resx">
+      <DependentUpon>IsPrimeControl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -155,6 +164,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\FractionBy_InfoText.txt" />
+    <Content Include="Resources\IsPrime_InfoText.txt" />
     <Content Include="Resources\PercentageOf_InfoText.txt" />
     <Content Include="Resources\SignTest_InfoText.txt" />
   </ItemGroup>
