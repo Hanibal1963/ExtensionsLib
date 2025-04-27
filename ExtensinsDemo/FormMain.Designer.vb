@@ -30,29 +30,31 @@ Partial Class FormMain
     Me.MenuItemFractionBy = New System.Windows.Forms.ToolStripMenuItem()
     Me.MenuItemSignTest = New System.Windows.Forms.ToolStripMenuItem()
     Me.MenuItemIsPrime = New System.Windows.Forms.ToolStripMenuItem()
-    Me.MenuItemDivisibilityAndMultiples = New System.Windows.Forms.ToolStripMenuItem()
-    Me.MenuItemIsInRangeOf = New System.Windows.Forms.ToolStripMenuItem()
-    Me.MenuItemDifferenceOf = New System.Windows.Forms.ToolStripMenuItem()
-    Me.MenuItemHexadecimalConversion = New System.Windows.Forms.ToolStripMenuItem()
-    Me.MenuItemFormatted = New System.Windows.Forms.ToolStripMenuItem()
-    Me.MenuItemStringCollections = New System.Windows.Forms.ToolStripMenuItem()
-    Me.MenuItemÜber = New System.Windows.Forms.ToolStripMenuItem()
-    Me.TabControl = New System.Windows.Forms.TabControl()
-    Me.TabPagePercentageOf = New System.Windows.Forms.TabPage()
+    Me.MenuItemDivisibility = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuItemMultiples = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuItemIsInRangeOf = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuItemDifferenceOf = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuItemHexadecimalConversion = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuItemFormatted = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuItemStringCollections = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuItemÜber = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TabControl = New System.Windows.Forms.TabControl()
+        Me.TabPagePercentageOf = New System.Windows.Forms.TabPage()
+        Me.PercentageOfControl = New SchlumpfSoft.ExtensionsDemo.PercentageOfControl()
         Me.TabPageFractionBy = New System.Windows.Forms.TabPage()
+        Me.FractionByControl = New SchlumpfSoft.ExtensionsDemo.FractionByControl()
         Me.TabPageSignTest = New System.Windows.Forms.TabPage()
+        Me.SignTestControl = New SchlumpfSoft.ExtensionsDemo.SignTestControl()
         Me.TabPageIsPrime = New System.Windows.Forms.TabPage()
-        Me.TabPageDivisibilityAndMultiples = New System.Windows.Forms.TabPage()
+        Me.IsPrimeControl = New SchlumpfSoft.ExtensionsDemo.IsPrimeControl()
+        Me.TabPageDivisibility = New System.Windows.Forms.TabPage()
+        Me.TabPageMultiples = New System.Windows.Forms.TabPage()
         Me.TabPageIsInRangeOf = New System.Windows.Forms.TabPage()
         Me.TabPageDifferenceOf = New System.Windows.Forms.TabPage()
         Me.TabPageHexadecimalConversion = New System.Windows.Forms.TabPage()
         Me.TabPageFormatted = New System.Windows.Forms.TabPage()
         Me.TabPageStringCollections = New System.Windows.Forms.TabPage()
         Me.MainMenu = New System.Windows.Forms.MenuStrip()
-        Me.PercentageOfControl = New SchlumpfSoft.ExtensionsDemo.PercentageOfControl()
-        Me.FractionByControl = New SchlumpfSoft.ExtensionsDemo.FractionByControl()
-        Me.SignTestControl = New SchlumpfSoft.ExtensionsDemo.SignTestControl()
-        Me.IsPrimeControl = New SchlumpfSoft.ExtensionsDemo.IsPrimeControl()
         MainMenuItemDatei = New System.Windows.Forms.ToolStripMenuItem()
         MainMenuItemAnsicht = New System.Windows.Forms.ToolStripMenuItem()
         MainMenuItemHilfe = New System.Windows.Forms.ToolStripMenuItem()
@@ -79,7 +81,7 @@ Partial Class FormMain
         '
         'MainMenuItemAnsicht
         '
-        MainMenuItemAnsicht.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuItemPercentageOf, Me.MenuItemFractionBy, Me.MenuItemSignTest, Me.MenuItemIsPrime, Me.MenuItemDivisibilityAndMultiples, Me.MenuItemIsInRangeOf, Me.MenuItemDifferenceOf, Me.MenuItemHexadecimalConversion, Me.MenuItemFormatted, Me.MenuItemStringCollections})
+        MainMenuItemAnsicht.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuItemPercentageOf, Me.MenuItemFractionBy, Me.MenuItemSignTest, Me.MenuItemIsPrime, Me.MenuItemDivisibility, Me.MenuItemMultiples, Me.MenuItemIsInRangeOf, Me.MenuItemDifferenceOf, Me.MenuItemHexadecimalConversion, Me.MenuItemFormatted, Me.MenuItemStringCollections})
         MainMenuItemAnsicht.Name = "MainMenuItemAnsicht"
         MainMenuItemAnsicht.Size = New System.Drawing.Size(59, 20)
         MainMenuItemAnsicht.Text = "Ansicht"
@@ -108,11 +110,17 @@ Partial Class FormMain
         Me.MenuItemIsPrime.Size = New System.Drawing.Size(237, 22)
         Me.MenuItemIsPrime.Text = "Primzahlprüfung"
         '
-        'MenuItemDivisibilityAndMultiples
+        'MenuItemDivisibility
         '
-        Me.MenuItemDivisibilityAndMultiples.Name = "MenuItemDivisibilityAndMultiples"
-        Me.MenuItemDivisibilityAndMultiples.Size = New System.Drawing.Size(237, 22)
-        Me.MenuItemDivisibilityAndMultiples.Text = "Teilbarkeit und Vielfache"
+        Me.MenuItemDivisibility.Name = "MenuItemDivisibility"
+        Me.MenuItemDivisibility.Size = New System.Drawing.Size(237, 22)
+        Me.MenuItemDivisibility.Text = "Teilbarkeitstest"
+        '
+        'MenuItemMultiples
+        '
+        Me.MenuItemMultiples.Name = "MenuItemMultiples"
+        Me.MenuItemMultiples.Size = New System.Drawing.Size(237, 22)
+        Me.MenuItemMultiples.Text = "Vielfachestest"
         '
         'MenuItemIsInRangeOf
         '
@@ -163,7 +171,8 @@ Partial Class FormMain
         Me.TabControl.Controls.Add(Me.TabPageFractionBy)
         Me.TabControl.Controls.Add(Me.TabPageSignTest)
         Me.TabControl.Controls.Add(Me.TabPageIsPrime)
-        Me.TabControl.Controls.Add(Me.TabPageDivisibilityAndMultiples)
+        Me.TabControl.Controls.Add(Me.TabPageDivisibility)
+        Me.TabControl.Controls.Add(Me.TabPageMultiples)
         Me.TabControl.Controls.Add(Me.TabPageIsInRangeOf)
         Me.TabControl.Controls.Add(Me.TabPageDifferenceOf)
         Me.TabControl.Controls.Add(Me.TabPageHexadecimalConversion)
@@ -188,6 +197,13 @@ Partial Class FormMain
         Me.TabPagePercentageOf.Text = "Prozentsatzberechnung"
         Me.TabPagePercentageOf.UseVisualStyleBackColor = True
         '
+        'PercentageOfControl
+        '
+        Me.PercentageOfControl.Location = New System.Drawing.Point(39, 38)
+        Me.PercentageOfControl.Name = "PercentageOfControl"
+        Me.PercentageOfControl.Size = New System.Drawing.Size(430, 253)
+        Me.PercentageOfControl.TabIndex = 0
+        '
         'TabPageFractionBy
         '
         Me.TabPageFractionBy.Controls.Add(Me.FractionByControl)
@@ -198,6 +214,13 @@ Partial Class FormMain
         Me.TabPageFractionBy.TabIndex = 3
         Me.TabPageFractionBy.Text = "Bruchteilberechnungen"
         Me.TabPageFractionBy.UseVisualStyleBackColor = True
+        '
+        'FractionByControl
+        '
+        Me.FractionByControl.Location = New System.Drawing.Point(24, 42)
+        Me.FractionByControl.Name = "FractionByControl"
+        Me.FractionByControl.Size = New System.Drawing.Size(428, 259)
+        Me.FractionByControl.TabIndex = 0
         '
         'TabPageSignTest
         '
@@ -210,6 +233,13 @@ Partial Class FormMain
         Me.TabPageSignTest.Text = "Vorzeichentest"
         Me.TabPageSignTest.UseVisualStyleBackColor = True
         '
+        'SignTestControl
+        '
+        Me.SignTestControl.Location = New System.Drawing.Point(81, 42)
+        Me.SignTestControl.Name = "SignTestControl"
+        Me.SignTestControl.Size = New System.Drawing.Size(387, 261)
+        Me.SignTestControl.TabIndex = 0
+        '
         'TabPageIsPrime
         '
         Me.TabPageIsPrime.Controls.Add(Me.IsPrimeControl)
@@ -221,15 +251,31 @@ Partial Class FormMain
         Me.TabPageIsPrime.Text = "Primzahlprüfung"
         Me.TabPageIsPrime.UseVisualStyleBackColor = True
         '
-        'TabPageDivisibilityAndMultiples
+        'IsPrimeControl
         '
-        Me.TabPageDivisibilityAndMultiples.Location = New System.Drawing.Point(4, 40)
-        Me.TabPageDivisibilityAndMultiples.Name = "TabPageDivisibilityAndMultiples"
-        Me.TabPageDivisibilityAndMultiples.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPageDivisibilityAndMultiples.Size = New System.Drawing.Size(792, 382)
-        Me.TabPageDivisibilityAndMultiples.TabIndex = 6
-        Me.TabPageDivisibilityAndMultiples.Text = "Teilbarkeit und Vielfache"
-        Me.TabPageDivisibilityAndMultiples.UseVisualStyleBackColor = True
+        Me.IsPrimeControl.Location = New System.Drawing.Point(59, 40)
+        Me.IsPrimeControl.Name = "IsPrimeControl"
+        Me.IsPrimeControl.Size = New System.Drawing.Size(390, 243)
+        Me.IsPrimeControl.TabIndex = 0
+        '
+        'TabPageDivisibility
+        '
+        Me.TabPageDivisibility.Location = New System.Drawing.Point(4, 40)
+        Me.TabPageDivisibility.Name = "TabPageDivisibility"
+        Me.TabPageDivisibility.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPageDivisibility.Size = New System.Drawing.Size(792, 382)
+        Me.TabPageDivisibility.TabIndex = 6
+        Me.TabPageDivisibility.Text = "Teilbarkeitstest"
+        Me.TabPageDivisibility.UseVisualStyleBackColor = True
+        '
+        'TabPageMultiples
+        '
+        Me.TabPageMultiples.Location = New System.Drawing.Point(4, 40)
+        Me.TabPageMultiples.Name = "TabPageMultiples"
+        Me.TabPageMultiples.Size = New System.Drawing.Size(792, 382)
+        Me.TabPageMultiples.TabIndex = 12
+        Me.TabPageMultiples.Text = "Mehrfachtest"
+        Me.TabPageMultiples.UseVisualStyleBackColor = True
         '
         'TabPageIsInRangeOf
         '
@@ -289,34 +335,6 @@ Partial Class FormMain
         Me.MainMenu.TabIndex = 1
         Me.MainMenu.Text = "MainMenu"
         '
-        'PercentageOfControl
-        '
-        Me.PercentageOfControl.Location = New System.Drawing.Point(39, 38)
-        Me.PercentageOfControl.Name = "PercentageOfControl"
-        Me.PercentageOfControl.Size = New System.Drawing.Size(430, 253)
-        Me.PercentageOfControl.TabIndex = 0
-        '
-        'FractionByControl
-        '
-        Me.FractionByControl.Location = New System.Drawing.Point(24, 42)
-        Me.FractionByControl.Name = "FractionByControl"
-        Me.FractionByControl.Size = New System.Drawing.Size(428, 259)
-        Me.FractionByControl.TabIndex = 0
-        '
-        'SignTestControl
-        '
-        Me.SignTestControl.Location = New System.Drawing.Point(81, 42)
-        Me.SignTestControl.Name = "SignTestControl"
-        Me.SignTestControl.Size = New System.Drawing.Size(387, 261)
-        Me.SignTestControl.TabIndex = 0
-        '
-        'IsPrimeControl
-        '
-        Me.IsPrimeControl.Location = New System.Drawing.Point(59, 40)
-        Me.IsPrimeControl.Name = "IsPrimeControl"
-        Me.IsPrimeControl.Size = New System.Drawing.Size(390, 243)
-        Me.IsPrimeControl.TabIndex = 0
-        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -351,10 +369,10 @@ Partial Class FormMain
   Private WithEvents MenuItemSignTest As ToolStripMenuItem
   Private WithEvents MenuItemIsPrime As ToolStripMenuItem
   Private WithEvents TabPageIsPrime As TabPage
-  Private WithEvents MenuItemDivisibilityAndMultiples As ToolStripMenuItem
+  Private WithEvents MenuItemDivisibility As ToolStripMenuItem
   Private WithEvents MenuItemIsInRangeOf As ToolStripMenuItem
   Private WithEvents TabPageIsInRangeOf As TabPage
-  Private WithEvents TabPageDivisibilityAndMultiples As TabPage
+  Private WithEvents TabPageDivisibility As TabPage
   Private WithEvents MenuItemDifferenceOf As ToolStripMenuItem
   Private WithEvents TabPageDifferenceOf As TabPage
   Private WithEvents MenuItemHexadecimalConversion As ToolStripMenuItem
@@ -367,4 +385,6 @@ Partial Class FormMain
     Private WithEvents FractionByControl As FractionByControl
     Private WithEvents SignTestControl As SignTestControl
     Private WithEvents IsPrimeControl As IsPrimeControl
+    Private WithEvents TabPageMultiples As TabPage
+    Private WithEvents MenuItemMultiples As ToolStripMenuItem
 End Class

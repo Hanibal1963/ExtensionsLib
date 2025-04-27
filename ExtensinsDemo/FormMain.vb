@@ -13,9 +13,10 @@ Public Class FormMain
     MenuItemBeenden.Click, MenuItemÜber.Click,
     MenuItemPercentageOf.Click, MenuItemFractionBy.Click,
     MenuItemSignTest.Click, MenuItemIsPrime.Click,
-    MenuItemDivisibilityAndMultiples.Click, MenuItemIsInRangeOf.Click,
-    MenuItemDifferenceOf.Click, MenuItemHexadecimalConversion.Click,
-    MenuItemFormatted.Click, MenuItemStringCollections.Click
+    MenuItemDivisibility.Click, MenuItemMultiples.Click,
+    MenuItemIsInRangeOf.Click, MenuItemDifferenceOf.Click,
+    MenuItemHexadecimalConversion.Click, MenuItemFormatted.Click,
+    MenuItemStringCollections.Click
 
     ' welches Menü wurde angeklickt
     Select Case True
@@ -26,7 +27,8 @@ Public Class FormMain
       Case sender Is Me.MenuItemFractionBy : Me.TabControl.SelectTab($"TabPageFractionBy")
       Case sender Is Me.MenuItemSignTest : Me.TabControl.SelectTab($"TabPageSignTest")
       Case sender Is Me.MenuItemIsPrime : Me.TabControl.SelectTab($"TabPageIsPrime")
-      Case sender Is Me.MenuItemDivisibilityAndMultiples : Me.TabControl.SelectTab($"TabPageDivisibilityAndMultiples")
+      Case sender Is Me.MenuItemDivisibility : Me.TabControl.SelectTab($"TabPageDivisibility")
+      Case sender Is Me.MenuItemMultiples : Me.TabControl.SelectTab($"TabPageMultiples")
       Case sender Is Me.MenuItemIsInRangeOf : Me.TabControl.SelectTab($"TabPageIsInRangeOf")
       Case sender Is Me.MenuItemDifferenceOf : Me.TabControl.SelectTab($"TabPageDifferenceOf")
       Case sender Is Me.MenuItemHexadecimalConversion : Me.TabControl.SelectTab($"TabPageHexadecimalConversion")
@@ -58,7 +60,9 @@ Public Class FormMain
         Me.IsPrimeControl.Dock = DockStyle.Fill
         Me.IsPrimeControl.Start()
 
-      Case e.TabPage Is Me.TabPageDivisibilityAndMultiples
+      Case e.TabPage Is Me.TabPageDivisibility
+
+      Case e.TabPage Is Me.MenuItemMultiples
 
       Case e.TabPage Is Me.TabPageIsInRangeOf
 
