@@ -78,6 +78,22 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Demo der Erweiterungsfunktinen IsPrime
+        '''======================================
+        '''
+        '''Diese Funktionen testet ob ein Wert eine Primzahl ist.
+        '''
+        '''Unterstützte Typen:
+        '''Short, UShort, Integer, UInteger, Long.
+        ''' ähnelt.
+        '''</summary>
+        Friend ReadOnly Property IsPrime_InfoText() As String
+            Get
+                Return ResourceManager.GetString("IsPrime_InfoText", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Demo der Erweiterungsfunktion PercentageOf
         '''==========================================
         '''
@@ -95,7 +111,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die Demo der Erweiterungsfunktinen isPositive und isNegative
+        '''========================================================
+        '''
+        '''Diese Funktionen testet ob ein Wert positiv oder negativ ist.
+        '''
+        '''Unterstützte Typen: 
+        '''Short, UShort, Integer, UInteger, Long, ULong, Decimal, Single, Double.
+        '''
+        ''' ähnelt.
         '''</summary>
         Friend ReadOnly Property SignTest_InfoText() As String
             Get
