@@ -25,10 +25,6 @@ Public Class SignTestControl
     Me.TextBox1.Text &= New String("-"c, header.Length) & vbCrLf
 
     Dim line As String
-
-
-
-
     For i As Double = -10 To 10
 
       ' Zeile formatieren
@@ -38,8 +34,6 @@ Public Class SignTestControl
       Me.TextBox1.Text &= line
 
     Next
-
-
 
   End Sub
 
