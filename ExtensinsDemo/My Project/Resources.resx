@@ -121,6 +121,12 @@
   <data name="FractionBy_InfoText" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FractionBy_InfoText.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="IsDivisibleBy_InfoText" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IsDivisibleBy_InfoText.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="IsMultipleOf_InfoText" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IsMultipleOf_InfoText.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="IsPrime_InfoText" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IsPrime_InfoText.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>

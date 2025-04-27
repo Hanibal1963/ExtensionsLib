@@ -78,6 +78,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        '''</summary>
+        Friend ReadOnly Property IsDivisibleBy_InfoText() As String
+            Get
+                Return ResourceManager.GetString("IsDivisibleBy_InfoText", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        '''</summary>
+        Friend ReadOnly Property IsMultipleOf_InfoText() As String
+            Get
+                Return ResourceManager.GetString("IsMultipleOf_InfoText", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Demo der Erweiterungsfunktinen IsPrime
         '''======================================
         '''
@@ -85,6 +103,7 @@ Namespace My.Resources
         '''
         '''Unterstützte Typen:
         '''Short, UShort, Integer, UInteger, Long.
+        '''
         ''' ähnelt.
         '''</summary>
         Friend ReadOnly Property IsPrime_InfoText() As String
