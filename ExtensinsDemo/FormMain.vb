@@ -61,8 +61,12 @@ Public Class FormMain
         Me.IsPrimeControl.Start()
 
       Case e.TabPage Is Me.TabPageDivisibility
+        Me.IsDivisibleByControl.Dock = DockStyle.Fill
+        Me.IsDivisibleByControl.Start()
 
       Case e.TabPage Is Me.MenuItemMultiples
+        Me.IsMultipleOfControl.Dock = DockStyle.Fill
+        Me.IsMultipleOfControl.Start()
 
       Case e.TabPage Is Me.TabPageIsInRangeOf
 

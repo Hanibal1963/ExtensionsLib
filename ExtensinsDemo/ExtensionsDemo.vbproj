@@ -86,6 +86,18 @@
     <Compile Include="FractionByControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="IsDivisibleByControl.Designer.vb">
+      <DependentUpon>IsDivisibleByControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IsDivisibleByControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IsMultipleOfControl.Designer.vb">
+      <DependentUpon>IsMultipleOfControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IsMultipleOfControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="IsPrimeControl.Designer.vb">
       <DependentUpon>IsPrimeControl.vb</DependentUpon>
     </Compile>
@@ -128,6 +140,12 @@
     <EmbeddedResource Include="FractionByControl.resx">
       <DependentUpon>FractionByControl.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IsDivisibleByControl.resx">
+      <DependentUpon>IsDivisibleByControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IsMultipleOfControl.resx">
+      <DependentUpon>IsMultipleOfControl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IsPrimeControl.resx">
       <DependentUpon>IsPrimeControl.vb</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +182,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\FractionBy_InfoText.txt" />
+    <Content Include="Resources\IsDivisibleBy_InfoText.txt" />
+    <Content Include="Resources\IsMultipleOf_InfoText.txt" />
     <Content Include="Resources\IsPrime_InfoText.txt" />
     <Content Include="Resources\PercentageOf_InfoText.txt" />
     <Content Include="Resources\SignTest_InfoText.txt" />
