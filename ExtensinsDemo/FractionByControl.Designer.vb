@@ -32,8 +32,9 @@ Partial Class FractionByControl
         Me.TextBox1.Location = New System.Drawing.Point(0, 0)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ReadOnly = True
         Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextBox1.Size = New System.Drawing.Size(292, 239)
+        Me.TextBox1.Size = New System.Drawing.Size(417, 293)
         Me.TextBox1.TabIndex = 0
         Me.TextBox1.WordWrap = False
         '
@@ -43,7 +44,7 @@ Partial Class FractionByControl
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.TextBox1)
         Me.Name = "FractionByControl"
-        Me.Size = New System.Drawing.Size(292, 239)
+        Me.Size = New System.Drawing.Size(417, 293)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
