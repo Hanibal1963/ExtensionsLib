@@ -69,8 +69,12 @@ Public Class FormMain
         Me.IsMultipleOfControl.Start()
 
       Case e.TabPage Is Me.TabPageIsInRangeOf
+        Me.IsInRangeOfControl.Dock = DockStyle.Fill
+        Me.IsInRangeOfControl.Start()
 
       Case e.TabPage Is Me.TabPageDifferenceOf
+        Me.DifferenceOfControl.Dock = DockStyle.Fill
+        Me.DifferenceOfControl.Start()
 
       Case e.TabPage Is Me.TabPageHexadecimalConversion
 
