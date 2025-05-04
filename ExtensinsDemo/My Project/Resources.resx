@@ -139,6 +139,9 @@
   <data name="IsPrime_InfoText" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IsPrime_InfoText.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="Papa_Schlumpf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Papa_Schlumpf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PercentageOf_InfoText" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PercentageOf_InfoText.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
