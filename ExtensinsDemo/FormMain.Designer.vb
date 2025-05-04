@@ -56,10 +56,10 @@ Partial Class FormMain
         Me.TabPageDifferenceOf = New System.Windows.Forms.TabPage()
         Me.DifferenceOfControl = New SchlumpfSoft.ExtensionsDemo.DifferenceOfControl()
         Me.TabPageHexadecimalConversion = New System.Windows.Forms.TabPage()
+        Me.HexadecimalConversionControl = New SchlumpfSoft.ExtensionsDemo.HexadecimalConversionControl()
         Me.TabPageFormatted = New System.Windows.Forms.TabPage()
         Me.TabPageStringCollections = New System.Windows.Forms.TabPage()
         Me.MainMenu = New System.Windows.Forms.MenuStrip()
-        Me.HexadecimalConversionControl = New SchlumpfSoft.ExtensionsDemo.HexadecimalConversionControl()
         MainMenuItemDatei = New System.Windows.Forms.ToolStripMenuItem()
         MainMenuItemAnsicht = New System.Windows.Forms.ToolStripMenuItem()
         MainMenuItemHilfe = New System.Windows.Forms.ToolStripMenuItem()
@@ -349,6 +349,13 @@ Partial Class FormMain
         Me.TabPageHexadecimalConversion.Text = "Hexadezimale Konvertierung"
         Me.TabPageHexadecimalConversion.UseVisualStyleBackColor = True
         '
+        'HexadecimalConversionControl
+        '
+        Me.HexadecimalConversionControl.Location = New System.Drawing.Point(82, 67)
+        Me.HexadecimalConversionControl.Name = "HexadecimalConversionControl"
+        Me.HexadecimalConversionControl.Size = New System.Drawing.Size(365, 209)
+        Me.HexadecimalConversionControl.TabIndex = 0
+        '
         'TabPageFormatted
         '
         Me.TabPageFormatted.Location = New System.Drawing.Point(4, 40)
@@ -377,13 +384,6 @@ Partial Class FormMain
         Me.MainMenu.Size = New System.Drawing.Size(800, 24)
         Me.MainMenu.TabIndex = 1
         Me.MainMenu.Text = "MainMenu"
-        '
-        'HexadecimalConversionControl
-        '
-        Me.HexadecimalConversionControl.Location = New System.Drawing.Point(82, 67)
-        Me.HexadecimalConversionControl.Name = "HexadecimalConversionControl"
-        Me.HexadecimalConversionControl.Size = New System.Drawing.Size(365, 209)
-        Me.HexadecimalConversionControl.TabIndex = 0
         '
         'FormMain
         '
