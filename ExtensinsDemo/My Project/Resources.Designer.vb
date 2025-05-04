@@ -61,6 +61,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Deme der Erweiterungsfunktionen DifferenceOf
+        '''============================================
+        '''
+        '''Diese Erweiterung berechnet die Differenz zwischen dem 
+        '''aktuellen Wert und einem angegebenen Wert.
+        '''
+        '''Unterstützte Typen:
+        '''Short, UShort, Integer, UInteger, Long, ULong, Decimal, Single, Double  
+        '''
+        ''' ähnelt.
+        '''</summary>
+        Friend ReadOnly Property DifferenceOf_InfoText() As String
+            Get
+                Return ResourceManager.GetString("DifferenceOf_InfoText", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Demo der Erweiterungsfunktion FractionBy
         '''========================================
         '''
@@ -78,7 +96,16 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die Demo der Erweiterungsfunktionen IsDivisibleBy
+        '''=============================================
+        '''
+        '''Diese Erweiterung überprüft, ob der übergebene Wert ohne Rest 
+        '''durch den angegebenen Divisor teilbar ist.
+        '''
+        '''Unterstützte Typen:
+        '''Short, UShort, Integer, UInteger, Long, ULong, Decimal, Single, Double
+        '''
+        ''' ähnelt.
         '''</summary>
         Friend ReadOnly Property IsDivisibleBy_InfoText() As String
             Get
@@ -87,7 +114,34 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die Demo der Erweiterungsfunktionen IsInRangeOf
+        '''===========================================
+        '''
+        '''Diese erweterung überprüft, ob der angegebene Wert innerhalb 
+        '''des angegebenen Bereichs liegt.
+        '''
+        '''Unterstützte Typen:
+        '''Short, UShort, Integer, UInteger, Long, ULong, Decimal, Single, Double  
+        '''
+        ''' ähnelt.
+        '''</summary>
+        Friend ReadOnly Property IsInRangeOf_InfoText() As String
+            Get
+                Return ResourceManager.GetString("IsInRangeOf_InfoText", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Demo der Erweiterungsfunktionen IsMultibleOf
+        '''============================================
+        '''
+        '''Diese Erweiterung überprüft, ob der übergebene Wert ein Vielfaches
+        '''des angegebenen Wertes ist.
+        '''
+        '''Unterstützte Typen:
+        '''Short, Ushort, Integer, UInteger, Long, ULong, Decimal, Single, Double
+        '''
+        ''' ähnelt.
         '''</summary>
         Friend ReadOnly Property IsMultipleOf_InfoText() As String
             Get
@@ -96,7 +150,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Demo der Erweiterungsfunktinen IsPrime
+        '''  Sucht eine lokalisierte Zeichenfolge, die Demo der Erweiterungsfunktionen IsPrime
         '''======================================
         '''
         '''Diese Funktionen testet ob ein Wert eine Primzahl ist.
