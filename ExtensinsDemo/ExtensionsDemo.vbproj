@@ -229,10 +229,5 @@
     <Content Include="Resources\PercentageOf_InfoText.txt" />
     <Content Include="Resources\SignTest_InfoText.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Svg">
-      <Version>3.4.7</Version>
-    </PackageReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
