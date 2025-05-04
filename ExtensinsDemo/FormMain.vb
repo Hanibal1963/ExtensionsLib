@@ -64,7 +64,7 @@ Public Class FormMain
         Me.IsDivisibleByControl.Dock = DockStyle.Fill
         Me.IsDivisibleByControl.Start()
 
-      Case e.TabPage Is Me.MenuItemMultiples
+      Case e.TabPage Is Me.TabPageMultiples
         Me.IsMultipleOfControl.Dock = DockStyle.Fill
         Me.IsMultipleOfControl.Start()
 
