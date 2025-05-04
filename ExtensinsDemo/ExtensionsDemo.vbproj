@@ -181,8 +181,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\DifferenceOf_InfoText.txt" />
     <Content Include="Resources\FractionBy_InfoText.txt" />
     <Content Include="Resources\IsDivisibleBy_InfoText.txt" />
+    <Content Include="Resources\IsInRangeOf_InfoText.txt" />
     <Content Include="Resources\IsMultipleOf_InfoText.txt" />
     <Content Include="Resources\IsPrime_InfoText.txt" />
     <Content Include="Resources\PercentageOf_InfoText.txt" />
