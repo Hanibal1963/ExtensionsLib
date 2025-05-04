@@ -96,6 +96,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Demo der Erweiterungsfunktionen ToVBHex und ToCSharpHex
+        '''=======================================================
+        '''
+        '''Diese Erweiterung konvertiert einen Wert in seine literale hexadezimale 
+        '''Visual Basic- bzw. CSharp- Darstellung.
+        '''
+        '''Unterstützte Typen:
+        '''Byte, Short, UShort, Integer, UInteger, Long.
+        '''
+        ''' ähnelt.
+        '''</summary>
+        Friend ReadOnly Property HexadecimalConversion_InfoText() As String
+            Get
+                Return ResourceManager.GetString("HexadecimalConversion_InfoText", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Demo der Erweiterungsfunktionen IsDivisibleBy
         '''=============================================
         '''
@@ -117,7 +135,7 @@ Namespace My.Resources
         '''  Sucht eine lokalisierte Zeichenfolge, die Demo der Erweiterungsfunktionen IsInRangeOf
         '''===========================================
         '''
-        '''Diese erweterung überprüft, ob der angegebene Wert innerhalb 
+        '''Diese Erweiterung überprüft, ob der angegebene Wert innerhalb 
         '''des angegebenen Bereichs liegt.
         '''
         '''Unterstützte Typen:
