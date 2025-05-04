@@ -20,23 +20,20 @@ Public Class IsMultipleOfControl
     Me.TextBox1.Text = My.Resources.IsMultipleOf_InfoText
 
     ' Kopfzeile erstellen
-    Dim header As String = $"{"Wert",-5}| {"",-15}{vbCrLf}"
+    Dim header As String = $"{"Wert",-5}| {"Mehrfaches von 7",-20}| {"Mehrfaches von 5",-20}{vbCrLf}"
     Me.TextBox1.Text &= header
     Me.TextBox1.Text &= New String("-"c, header.Length) & vbCrLf
 
-    'Dim line As String
-    'For i As Integer = 1 To 100
+    Dim line As String
+    For i As Integer = 1 To 100
 
-    '  ' Zeile formatieren
-    '  line = $"{i,-5}| {i.IsPrime,-15}{vbCrLf}"
+      ' Zeile formatieren
+      line = $"{i,-5}| {i.IsMultipleOf(7),-20}| {i.IsMultipleOf(5),-20}{vbCrLf}"
 
-    '  ' Zeile anhängen
-    '  Me.TextBox1.Text &= line
+      ' Zeile anhängen
+      Me.TextBox1.Text &= line
 
-    'Next
-
-
-
+    Next
 
   End Sub
 
