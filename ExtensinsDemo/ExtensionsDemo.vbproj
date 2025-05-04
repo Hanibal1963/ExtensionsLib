@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DifferenceOfControl.Designer.vb">
+      <DependentUpon>DifferenceOfControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DifferenceOfControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="FormMain.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,12 @@
       <DependentUpon>IsDivisibleByControl.vb</DependentUpon>
     </Compile>
     <Compile Include="IsDivisibleByControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IsInRangeOfControl.Designer.vb">
+      <DependentUpon>IsInRangeOfControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IsInRangeOfControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="IsMultipleOfControl.Designer.vb">
@@ -134,6 +146,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DifferenceOfControl.resx">
+      <DependentUpon>DifferenceOfControl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.vb</DependentUpon>
     </EmbeddedResource>
@@ -142,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IsDivisibleByControl.resx">
       <DependentUpon>IsDivisibleByControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IsInRangeOfControl.resx">
+      <DependentUpon>IsInRangeOfControl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IsMultipleOfControl.resx">
       <DependentUpon>IsMultipleOfControl.vb</DependentUpon>
