@@ -1,4 +1,4 @@
-﻿Demo der Erweiterungsfunktinen IsPrime
+﻿Demo der Erweiterungsfunktionen IsPrime
 ======================================
 
 Diese Funktionen testet ob ein Wert eine Primzahl ist.
