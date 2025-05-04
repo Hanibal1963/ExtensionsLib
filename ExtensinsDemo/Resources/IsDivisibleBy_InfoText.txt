@@ -1,1 +1,7 @@
-﻿
+﻿Demo der Erweiterungsfunktionen IsDivisibleBy
+=============================================
+
+Diese Erweiterung überprüft, ob der übergebene Wert ohne Rest 
+durch den angegebenen Divisor teilbar ist.
+
+Unterstützte Typen:
