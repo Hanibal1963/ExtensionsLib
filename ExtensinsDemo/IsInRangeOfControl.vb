@@ -19,6 +19,9 @@ Public Class IsInRangeOfControl
     ' Infotext laden
     Me.TextBox1.Text = My.Resources.IsInRangeOf_InfoText
 
+    'TODO: Code für die Demo noch erstellen
+    Me.TextBox1.Text &= $"Code für die Demo muß noch erstellt werden !" & vbCrLf & vbCrLf
+
     ' Kopfzeile erstellen
     Dim header As String = $"{"Wert",-5}| {"",-15}{vbCrLf}"
     Me.TextBox1.Text &= header
