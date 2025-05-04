@@ -11,9 +11,10 @@
     <AssemblyName>ExtensionsDemo</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -73,6 +74,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutBox.Designer.vb">
+      <DependentUpon>AboutBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AboutBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DifferenceOfControl.Designer.vb">
       <DependentUpon>DifferenceOfControl.vb</DependentUpon>
     </Compile>
@@ -152,6 +159,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DifferenceOfControl.resx">
       <DependentUpon>DifferenceOfControl.vb</DependentUpon>
     </EmbeddedResource>
@@ -215,8 +225,14 @@
     <Content Include="Resources\IsInRangeOf_InfoText.txt" />
     <Content Include="Resources\IsMultipleOf_InfoText.txt" />
     <Content Include="Resources\IsPrime_InfoText.txt" />
+    <None Include="Resources\Papa_Schlumpf.png" />
     <Content Include="Resources\PercentageOf_InfoText.txt" />
     <Content Include="Resources\SignTest_InfoText.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Svg">
+      <Version>3.4.7</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

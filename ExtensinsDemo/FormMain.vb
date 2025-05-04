@@ -9,6 +9,8 @@
 
 Public Class FormMain
 
+  Private WithEvents AboutDialog As New AboutBox
+
   Private Sub MainMenuItem_Click(sender As Object, e As EventArgs) Handles _
     MenuItemBeenden.Click, MenuItemÜber.Click,
     MenuItemPercentageOf.Click, MenuItemFractionBy.Click,
@@ -22,7 +24,7 @@ Public Class FormMain
     Select Case True
 
       Case sender Is Me.MenuItemBeenden : Me.Close()
-      Case sender Is Me.MenuItemÜber : Me.ShowAboutDialog()
+      Case sender Is Me.MenuItemÜber : Dim unused = Me.AboutDialog.ShowDialog(Me)
       Case sender Is Me.MenuItemPercentageOf : Me.TabControl.SelectTab($"TabPagePercentageOf")
       Case sender Is Me.MenuItemFractionBy : Me.TabControl.SelectTab($"TabPageFractionBy")
       Case sender Is Me.MenuItemSignTest : Me.TabControl.SelectTab($"TabPageSignTest")
@@ -85,12 +87,6 @@ Public Class FormMain
       Case e.TabPage Is Me.TabPageStringCollections
 
     End Select
-
-  End Sub
-
-  Private Sub ShowAboutDialog()
-
-    MsgBox($"Funktion noch nicht implementiert.")
 
   End Sub
 
