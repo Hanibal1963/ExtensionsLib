@@ -5,6 +5,5 @@ Diese erweterung überprüft, ob der angegebene Wert innerhalb
 des angegebenen Bereichs liegt.
 
 Unterstützte Typen:
-
-
+Short, UShort, Integer, UInteger, Long, ULong, Decimal, Single, Double  
 

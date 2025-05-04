@@ -5,7 +5,5 @@ Diese Erweiterung berechnet die Differenz zwischen dem
 aktuellen Wert und einem angegebenen Wert.
 
 Unterstützte Typen:
-
-
-
+Short, UShort, Integer, UInteger, Long, ULong, Decimal, Single, Double  
 
