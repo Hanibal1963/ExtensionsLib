@@ -52,13 +52,14 @@ Partial Class FormMain
         Me.TabPageMultiples = New System.Windows.Forms.TabPage()
         Me.IsMultipleOfControl = New SchlumpfSoft.ExtensionsDemo.IsMultipleOfControl()
         Me.TabPageIsInRangeOf = New System.Windows.Forms.TabPage()
+        Me.IsInRangeOfControl = New SchlumpfSoft.ExtensionsDemo.IsInRangeOfControl()
         Me.TabPageDifferenceOf = New System.Windows.Forms.TabPage()
+        Me.DifferenceOfControl = New SchlumpfSoft.ExtensionsDemo.DifferenceOfControl()
         Me.TabPageHexadecimalConversion = New System.Windows.Forms.TabPage()
         Me.TabPageFormatted = New System.Windows.Forms.TabPage()
         Me.TabPageStringCollections = New System.Windows.Forms.TabPage()
         Me.MainMenu = New System.Windows.Forms.MenuStrip()
-        Me.DifferenceOfControl = New SchlumpfSoft.ExtensionsDemo.DifferenceOfControl()
-        Me.IsInRangeOfControl = New SchlumpfSoft.ExtensionsDemo.IsInRangeOfControl()
+        Me.HexadecimalConversionControl = New SchlumpfSoft.ExtensionsDemo.HexadecimalConversionControl()
         MainMenuItemDatei = New System.Windows.Forms.ToolStripMenuItem()
         MainMenuItemAnsicht = New System.Windows.Forms.ToolStripMenuItem()
         MainMenuItemHilfe = New System.Windows.Forms.ToolStripMenuItem()
@@ -71,6 +72,7 @@ Partial Class FormMain
         Me.TabPageMultiples.SuspendLayout()
         Me.TabPageIsInRangeOf.SuspendLayout()
         Me.TabPageDifferenceOf.SuspendLayout()
+        Me.TabPageHexadecimalConversion.SuspendLayout()
         Me.MainMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -312,6 +314,13 @@ Partial Class FormMain
         Me.TabPageIsInRangeOf.Text = "Bereichsprüfung"
         Me.TabPageIsInRangeOf.UseVisualStyleBackColor = True
         '
+        'IsInRangeOfControl
+        '
+        Me.IsInRangeOfControl.Location = New System.Drawing.Point(61, 51)
+        Me.IsInRangeOfControl.Name = "IsInRangeOfControl"
+        Me.IsInRangeOfControl.Size = New System.Drawing.Size(478, 281)
+        Me.IsInRangeOfControl.TabIndex = 0
+        '
         'TabPageDifferenceOf
         '
         Me.TabPageDifferenceOf.Controls.Add(Me.DifferenceOfControl)
@@ -323,8 +332,16 @@ Partial Class FormMain
         Me.TabPageDifferenceOf.Text = "Differenzberechnung"
         Me.TabPageDifferenceOf.UseVisualStyleBackColor = True
         '
+        'DifferenceOfControl
+        '
+        Me.DifferenceOfControl.Location = New System.Drawing.Point(40, 32)
+        Me.DifferenceOfControl.Name = "DifferenceOfControl"
+        Me.DifferenceOfControl.Size = New System.Drawing.Size(417, 231)
+        Me.DifferenceOfControl.TabIndex = 0
+        '
         'TabPageHexadecimalConversion
         '
+        Me.TabPageHexadecimalConversion.Controls.Add(Me.HexadecimalConversionControl)
         Me.TabPageHexadecimalConversion.Location = New System.Drawing.Point(4, 40)
         Me.TabPageHexadecimalConversion.Name = "TabPageHexadecimalConversion"
         Me.TabPageHexadecimalConversion.Size = New System.Drawing.Size(792, 382)
@@ -361,19 +378,12 @@ Partial Class FormMain
         Me.MainMenu.TabIndex = 1
         Me.MainMenu.Text = "MainMenu"
         '
-        'DifferenceOfControl
+        'HexadecimalConversionControl
         '
-        Me.DifferenceOfControl.Location = New System.Drawing.Point(40, 32)
-        Me.DifferenceOfControl.Name = "DifferenceOfControl"
-        Me.DifferenceOfControl.Size = New System.Drawing.Size(417, 231)
-        Me.DifferenceOfControl.TabIndex = 0
-        '
-        'IsInRangeOfControl
-        '
-        Me.IsInRangeOfControl.Location = New System.Drawing.Point(61, 51)
-        Me.IsInRangeOfControl.Name = "IsInRangeOfControl"
-        Me.IsInRangeOfControl.Size = New System.Drawing.Size(478, 281)
-        Me.IsInRangeOfControl.TabIndex = 0
+        Me.HexadecimalConversionControl.Location = New System.Drawing.Point(82, 67)
+        Me.HexadecimalConversionControl.Name = "HexadecimalConversionControl"
+        Me.HexadecimalConversionControl.Size = New System.Drawing.Size(365, 209)
+        Me.HexadecimalConversionControl.TabIndex = 0
         '
         'FormMain
         '
@@ -394,6 +404,7 @@ Partial Class FormMain
         Me.TabPageMultiples.ResumeLayout(False)
         Me.TabPageIsInRangeOf.ResumeLayout(False)
         Me.TabPageDifferenceOf.ResumeLayout(False)
+        Me.TabPageHexadecimalConversion.ResumeLayout(False)
         Me.MainMenu.ResumeLayout(False)
         Me.MainMenu.PerformLayout()
         Me.ResumeLayout(False)
@@ -435,4 +446,5 @@ Partial Class FormMain
     Private WithEvents IsMultipleOfControl As IsMultipleOfControl
     Private WithEvents IsInRangeOfControl As IsInRangeOfControl
     Private WithEvents DifferenceOfControl As DifferenceOfControl
+    Private WithEvents HexadecimalConversionControl As HexadecimalConversionControl
 End Class

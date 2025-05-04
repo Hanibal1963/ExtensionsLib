@@ -77,6 +77,8 @@ Public Class FormMain
         Me.DifferenceOfControl.Start()
 
       Case e.TabPage Is Me.TabPageHexadecimalConversion
+        Me.HexadecimalConversionControl.Dock = DockStyle.Fill
+        Me.HexadecimalConversionControl.Start()
 
       Case e.TabPage Is Me.TabPageFormatted
 
