@@ -1,7 +1,7 @@
 ﻿Demo der Erweiterungsfunktionen IsInRangeOf
 ===========================================
 
-Diese erweterung überprüft, ob der angegebene Wert innerhalb 
+Diese Erweiterung überprüft, ob der angegebene Wert innerhalb 
 des angegebenen Bereichs liegt.
 
 Unterstützte Typen:
