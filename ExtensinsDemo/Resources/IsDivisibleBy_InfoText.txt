@@ -5,3 +5,5 @@ Diese Erweiterung überprüft, ob der übergebene Wert ohne Rest
 durch den angegebenen Divisor teilbar ist.
 
 Unterstützte Typen:
+Short, UShort, Integer, UInteger, Long, ULong, Decimal, Single, Double
+
