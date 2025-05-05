@@ -29,7 +29,7 @@ Public Class PercentageOfControl
     For i As Double = 5 To 100 Step 5
 
       ' Zeile formatieren
-      line = $"{i,-5}| {i.PercentageOf(total),-15}| {total,-5}{vbCrLf}"
+      line = $"{i,-5}| {PercentageOfFunctions.PercentageOf(i, total),-15}| {total,-5}{vbCrLf}"
 
       ' Zeile anhängen
       Me.TextBox1.Text &= line

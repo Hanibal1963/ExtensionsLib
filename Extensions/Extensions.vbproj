@@ -93,6 +93,7 @@
     </Compile>
     <Compile Include="DataExtensions.vb" />
     <Compile Include="NativeMethods.vb" />
+    <Compile Include="PercentageOfFunctions.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
