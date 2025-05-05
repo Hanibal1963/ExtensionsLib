@@ -74,6 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BitmapExtensions.vb" />
+    <Compile Include="FractionByFunctions.vb" />
     <Compile Include="InternalFunctions.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
