@@ -1,0 +1,9 @@
+﻿Demo der Erweiterungsfunktionen IsMultibleOf
+============================================
+
+Diese Erweiterung überprüft, ob der übergebene Wert ein Vielfaches
+des angegebenen Wertes ist.
+
+Unterstützte Typen:
+Short, Ushort, Integer, UInteger, Long, ULong, Decimal, Single, Double
+

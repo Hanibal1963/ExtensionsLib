@@ -1,0 +1,9 @@
+﻿Demo der Erweiterungsfunktionen ToVBHex und ToCSharpHex
+=======================================================
+
+Diese Erweiterung konvertiert einen Wert in seine literale hexadezimale 
+Visual Basic- bzw. CSharp- Darstellung.
+
+Unterstützte Typen:
+Byte, Short, UShort, Integer, UInteger, Long.
+

@@ -1,0 +1,8 @@
+﻿Demo der Erweiterungsfunktionen IsPrime
+======================================
+
+Diese Funktionen testet ob ein Wert eine Primzahl ist.
+
+Unterstützte Typen:
+Short, UShort, Integer, UInteger, Long.
+
