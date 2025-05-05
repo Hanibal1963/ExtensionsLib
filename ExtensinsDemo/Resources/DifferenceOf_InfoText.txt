@@ -1,4 +1,4 @@
-﻿Deme der Erweiterungsfunktionen DifferenceOf
+﻿Demo der Erweiterungsfunktionen DifferenceOf
 ============================================
 
 Diese Erweiterung berechnet die Differenz zwischen dem 
