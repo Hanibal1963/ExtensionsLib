@@ -1,8 +1,0 @@
-﻿Demo der Erweiterungsfunktion FractionBy
-========================================
-
-Berechnet den Bruchteil eines Wertes basierend auf einem Prozentsatz.
-
-Unterstützte Typen:
-Short, UShort, Integer, UInteger, Long, ULong, Decimal, Single, Double.
-

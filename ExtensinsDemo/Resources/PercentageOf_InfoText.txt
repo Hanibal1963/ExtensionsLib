@@ -1,8 +1,0 @@
-Demo der Erweiterungsfunktion PercentageOf
-==========================================
-
-Berechnet den Prozentsatz eines Wertes im Verhältnis zu einem Gesamtwert.
-
-Unterstützte Typen: 
-Short, UShort, Integer, UInteger, Long, ULong, Decimal, Single, Double.
-
