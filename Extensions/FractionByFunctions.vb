@@ -1,6 +1,6 @@
 ﻿' *************************************************************************************************
 ' 
-' DataExtensions.vb
+' FractionByFunctions.vb
 ' Copyright (c)2025 by Andreas Sauer 
 '
 ' Kurzbeschreibung:
