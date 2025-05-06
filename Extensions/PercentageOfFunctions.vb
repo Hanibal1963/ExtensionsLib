@@ -14,7 +14,7 @@ Imports SchlumpfSoft.Extensions.InternalFunctions
 ''' Definition der Funktionen um den Prozentsatz eines Wertes 
 ''' von einem Gesamtwert berechnen
 ''' </summary>
-Module PercentageOfFunctions
+Public Module PercentageOfFunctions
 
   ''' <summary>
   ''' Berechnet den Prozentsatz eines Wertes von einem gegebenen Gesamtwert (<paramref name="total"/>).

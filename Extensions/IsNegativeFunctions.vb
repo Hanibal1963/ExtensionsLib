@@ -13,7 +13,7 @@ Imports SchlumpfSoft.Extensions.InternalFunctions
 ''' <summary>
 ''' Definition der Funktionen zum Bestimmen ob ein Wert negativ ist
 ''' </summary>
-Module IsNegativeFunctions
+Public Module IsNegativeFunctions
 
 
   ''' <summary>

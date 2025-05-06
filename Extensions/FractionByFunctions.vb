@@ -13,7 +13,7 @@ Imports SchlumpfSoft.Extensions.InternalFunctions
 ''' <summary>
 ''' Definition der Funktionen um den Bruchteil eines Wertes zu berechnen
 ''' </summary>
-Module FractionByFunctions
+Public Module FractionByFunctions
 
   ''' <summary>
   ''' Berechnet den Bruchteil eines Wertes in Prozent.
