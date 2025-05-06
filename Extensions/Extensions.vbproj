@@ -76,6 +76,7 @@
     <Compile Include="BitmapExtensions.vb" />
     <Compile Include="FractionByFunctions.vb" />
     <Compile Include="InternalFunctions.vb" />
+    <Compile Include="IsDivisibleByFunctions.vb" />
     <Compile Include="IsNegativeFunctions.vb" />
     <Compile Include="IsPositiveFunctions.vb" />
     <Compile Include="IsPrimeFunctions.vb" />

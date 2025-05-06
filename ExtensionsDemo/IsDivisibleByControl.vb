@@ -28,7 +28,7 @@ Public Class IsDivisibleByControl
     For i As Integer = 1 To 100
 
       ' Zeile formatieren
-      line = $"{i,-5}| {i.IsDivisibleBy(7),-15}| {i.IsDivisibleBy(5),-15}{vbCrLf}"
+      line = $"{i,-5}| {IsDivisibleByFunctions.IsDivisibleBy(i, 7),-15}| {IsDivisibleByFunctions.IsDivisibleBy(i, 5),-15}{vbCrLf}"
 
       ' Zeile anhängen
       Me.TextBox1.Text &= line
